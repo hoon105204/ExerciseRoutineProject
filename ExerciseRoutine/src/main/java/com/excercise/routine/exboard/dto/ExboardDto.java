@@ -8,22 +8,19 @@ public class ExboardDto {
 	private String title;
 	private String content;
 	private Date bdate;
-	private int btot;
-	private int ball;
 	
 	public ExboardDto() {
 		super();
 	}
 	
-	public ExboardDto(int bno, String username, String title, String content, Date bdate, int btot, int ball) {
+	public ExboardDto(int bno, String username, String title, String content, Date bdate) {
 		super();
 		this.bno = bno;
 		this.username = username;
 		this.title = title;
 		this.content = content;
 		this.bdate = bdate;
-		this.btot = btot;
-		this.ball = ball;
+		
 	}
 	
 	public int getBno() {
@@ -55,24 +52,6 @@ public class ExboardDto {
 	}
 	public void setBdate(Date bdate) {
 		this.bdate = bdate;
-	}
-	public int getBtot() {
-		return btot;
-	}
-	public void setBtot(int btot) {
-		this.btot = btot;
-	}
-	public int getBall() {
-		return ball;
-	}
-	public void setBall(int ball) {
-		this.ball = ball;
-	}
-	
-	@Override
-	public String toString() {
-		return "ExboardDto [bno=" + bno + ", username=" + username + ", title=" + title + ", content=" + content
-				+ ", bdate=" + bdate + ", btot=" + btot + ", ball=" + ball + "]";
 	}
 	
 }

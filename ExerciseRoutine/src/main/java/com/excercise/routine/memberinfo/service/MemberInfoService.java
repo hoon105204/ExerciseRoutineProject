@@ -10,4 +10,5 @@ public interface MemberInfoService {
 	public int insert(MemberInfoDto dto);
 	public int update(MemberInfoDto dto);
 	public int idCheck(String id);
+	public MemberInfoDto login(String userid, String userpw);
 }

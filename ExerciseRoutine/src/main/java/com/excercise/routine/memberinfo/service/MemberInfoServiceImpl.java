@@ -39,4 +39,9 @@ public class MemberInfoServiceImpl implements MemberInfoService {
 		return memberinfomapper.idCheck(id);
 	}
 
+	@Override
+	public MemberInfoDto login(String userid, String userpw) {
+		return memberinfomapper.login(userid, userpw);
+	}
+
 }
