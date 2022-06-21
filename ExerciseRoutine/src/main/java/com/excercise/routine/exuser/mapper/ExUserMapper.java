@@ -21,7 +21,7 @@ public interface ExUserMapper {
 	
 	// 특정 날짜 운동기록 가져오기
 	@Select(" SELECT * FROM EXCERCISE_USER WHERE EXDATE=#{exdate} ")
-	List<ExUserDto> selectOne(Date exdate);
+	List<ExUserDto> selectDate(Date exdate);
 	
 	@Insert(" INSERT INTO EXCERCISE_USER VALUES(#{exname}, #{expart}, #{exrep}, #{exset}, #{exvol}, #{exdate}) ")
 	int insert(ExUserDto dto);
