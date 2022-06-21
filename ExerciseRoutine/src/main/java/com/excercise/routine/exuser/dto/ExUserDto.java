@@ -3,20 +3,20 @@ package com.excercise.routine.exuser.dto;
 public class ExUserDto {
 	private String exname;
 	private String expart;
-	private int rep;
-	private int set;
-	private float vol;
+	private int exrep;
+	private int exset;
+	private float exvol;
 	public ExUserDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ExUserDto(String exname, String expart, int rep, int set, float vol) {
+	public ExUserDto(String exname, String expart, int exrep, int exset, float exvol) {
 		super();
 		this.exname = exname;
 		this.expart = expart;
-		this.rep = rep;
-		this.set = set;
-		this.vol = vol;
+		this.exrep = exrep;
+		this.exset = exset;
+		this.exvol = exvol;
 	}
 	public String getExname() {
 		return exname;
@@ -30,24 +30,26 @@ public class ExUserDto {
 	public void setExpart(String expart) {
 		this.expart = expart;
 	}
-	public int getRep() {
-		return rep;
+	public int getExrep() {
+		return exrep;
 	}
-	public void setRep(int rep) {
-		this.rep = rep;
+	public void setExrep(int exrep) {
+		this.exrep = exrep;
 	}
-	public int getSet() {
-		return set;
+	public int getExset() {
+		return exset;
 	}
-	public void setSet(int set) {
-		this.set = set;
+	public void setExset(int exset) {
+		this.exset = exset;
 	}
-	public float getVol() {
-		return vol;
+	public float getExvol() {
+		return exvol;
 	}
-	public void setVol(float vol) {
-		this.vol = vol;
+	public void setExvol(float exvol) {
+		this.exvol = exvol;
 	}
+	
+	
 	
 	
 	
