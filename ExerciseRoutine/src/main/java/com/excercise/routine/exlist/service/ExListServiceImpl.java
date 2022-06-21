@@ -16,8 +16,7 @@ public class ExListServiceImpl implements ExListService {
 	
 	@Override
 	public List<ExListDto> selectAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return exListMapper.selectAll();
 	}
 
 	@Override
