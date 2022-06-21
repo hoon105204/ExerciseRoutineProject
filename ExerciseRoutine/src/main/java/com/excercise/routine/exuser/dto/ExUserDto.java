@@ -5,14 +5,12 @@ public class ExUserDto {
 	private String expart;
 	private int rep;
 	private int set;
-	private int vol;
-	
+	private float vol;
 	public ExUserDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public ExUserDto(String exname, String expart, int rep, int set, int vol) {
+	public ExUserDto(String exname, String expart, int rep, int set, float vol) {
 		super();
 		this.exname = exname;
 		this.expart = expart;
@@ -20,7 +18,6 @@ public class ExUserDto {
 		this.set = set;
 		this.vol = vol;
 	}
-	
 	public String getExname() {
 		return exname;
 	}
@@ -45,12 +42,14 @@ public class ExUserDto {
 	public void setSet(int set) {
 		this.set = set;
 	}
-	public int getVol() {
+	public float getVol() {
 		return vol;
 	}
-	public void setVol(int vol) {
+	public void setVol(float vol) {
 		this.vol = vol;
 	}
+	
+	
 	
 	
 }
