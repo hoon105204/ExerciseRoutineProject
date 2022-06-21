@@ -1,22 +1,26 @@
 package com.excercise.routine.exuser.dto;
 
+import java.util.Date;
+
 public class ExUserDto {
 	private String exname;
 	private String expart;
 	private int exrep;
 	private int exset;
 	private float exvol;
+	private Date exdate;
 	public ExUserDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ExUserDto(String exname, String expart, int exrep, int exset, float exvol) {
+	public ExUserDto(String exname, String expart, int exrep, int exset, float exvol, Date exdate) {
 		super();
 		this.exname = exname;
 		this.expart = expart;
 		this.exrep = exrep;
 		this.exset = exset;
 		this.exvol = exvol;
+		this.exdate = exdate;
 	}
 	public String getExname() {
 		return exname;
@@ -48,6 +52,14 @@ public class ExUserDto {
 	public void setExvol(float exvol) {
 		this.exvol = exvol;
 	}
+	public Date getExdate() {
+		return exdate;
+	}
+	public void setExdate(Date exdate) {
+		this.exdate = exdate;
+	}
+	
+	
 	
 	
 	
