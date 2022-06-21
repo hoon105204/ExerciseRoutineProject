@@ -15,14 +15,14 @@ public interface MemberInfoMapper {
 	@Select(" SELECT * FROM MEMBERINFO ORDER BY USERID DESC ")
 	List<MemberInfoDto> selectList();
 	
-	@Select(" SELECT * FROM MEMBERINFO WHERE USERID=? ")
+	@Select(" SELECT * FROM MEMBERINFO WHERE USERID=#{USERID} ")
 	MemberInfoDto selectOne(String USERID);
 	
 	@Insert(" INSERT INTO MEMBERINFO VALUES(#{userid}, #{userpw}, "
 			+ "#{username}, #{gender}, #{birth}, #{height}, #{weight}) ")
 	int insert(MemberInfoDto dto);
 	
-	@Update(" UPDATE MEMBERINFO SET HEIGHT=? WHERE USERID=? ")
+	@Update(" UPDATE MEMBERINFO SET WEIGHT=#{dto.weight} WHERE USERID=#{dto.userid} ")
 	int update(MemberInfoDto dto);
 	
 	@Select(" SELECT COUNT(USERID) FROM MEMBERINFO WHERE USERID =#{id}")

@@ -69,8 +69,8 @@ h1 {
 			</tr>
 			<tr>
 				<th>성 별</th>
-				<td>남<input type="radio" name="gender" value="M"> 여<input
-					type="radio" name="gender" value="F"></td>
+				<td>남<input type="radio" name="gender" value="M">
+				    여<input type="radio" name="gender" value="F"></td>
 			</tr>
 			<tr>
 				<th>생년월일</th>
@@ -78,13 +78,11 @@ h1 {
 			</tr>
 			<tr>
 				<th>키</th>
-				<td><input type="number" name="height" min="100" max="300"
-					step="0.1"></td>
+				<td><input type="number" name="height" min="100" max="300" step="0.1"></td>
 			</tr>
 			<tr>
 				<th>몸무게</th>
-				<td><input type="number" name="weight" min="20" max="300"
-					step="0.1"></td>
+				<td><input type="number" name="weight" min="20" max="300" step="0.1"></td>
 			</tr>
 			<tr>
 				<td colspan="3" align="center">

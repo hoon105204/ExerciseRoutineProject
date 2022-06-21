@@ -1,8 +1,10 @@
 package com.excercise.routine.controller.login;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,12 +21,26 @@ public class LoginController {
 	private MemberInfoService memberinfoservice;
 
 	@PostMapping("login")
-	public String login(String userid, String userpw) {
+	public String login(Model model, String userid, String userpw) {
 		if(memberinfoservice.login(userid, userpw)!=null) {
+			model.addAttribute("userid",userid);
 			return "home";
 		} else {
 			return "redirect:/";
 		}
+	}
+	
+	@PostMapping("asd")
+	public String selectList(Model model) {
+		List<MemberInfoDto> list = memberinfoservice.selectList();
+		model.addAttribute("list",list);
+		return "";
+	}
+	
+	@PostMapping("asdf")
+	public String selectOne(Model model, String userid) {
+		model.addAttribute("dto",memberinfoservice.selectOne(userid));
+		return "";
 	}
 
 	@PostMapping("sign_up")
@@ -48,4 +64,6 @@ public class LoginController {
 		int cnt = memberinfoservice.idCheck(id);
 		return cnt;
 	}
+	
+	
 }
