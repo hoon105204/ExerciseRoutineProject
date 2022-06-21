@@ -30,7 +30,7 @@
 				<td><input type="password" name="memberpw"></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center">
+				<td colspan="3" align="center">
 					<input type="submit" value="로그인">
 					<input type="button" value="회원가입" onclick="location.href='/sign/sign_up'">
 				</td>
