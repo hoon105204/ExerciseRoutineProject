@@ -16,14 +16,12 @@ public class MemberInfoServiceImpl implements MemberInfoService {
 	
 	@Override
 	public List<MemberInfoDto> selectList() {
-		
-		return null;
+		return memberinfomapper.selectList();
 	}
 
 	@Override
 	public MemberInfoDto selectOne(String USERID) {
-		
-		return null;
+		return memberinfomapper.selectOne(USERID);
 	}
 
 	@Override
@@ -32,9 +30,8 @@ public class MemberInfoServiceImpl implements MemberInfoService {
 	}
 
 	@Override
-	public int update(MemberInfoDto dto) {
-		
-		return 0;
+	public int update(MemberInfoDto dto) {	
+		return memberinfomapper.update(dto);
 	}
 
 }

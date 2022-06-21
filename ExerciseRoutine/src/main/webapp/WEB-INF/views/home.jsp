@@ -6,10 +6,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<style>
+
+</style>
 <body bgcolor="skyblue">
 	<table>
 		<tr>
-			<td colspan="5" align="center">
+			<td colspan="5" align="center" align="bottom">
 			<input type="button" value="홈" onclick="location.href=''">
 			<input type="button" value="캘린더" onclick="location.href=''">
 			<input type="button" value="라이브러리" onclick="location.href=''">
