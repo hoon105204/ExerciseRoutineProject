@@ -18,7 +18,8 @@ public interface MemberInfoMapper {
 	@Select(" SELECT * FROM MEMBERINFO WHERE USERID=? ")
 	MemberInfoDto selectOne(String USERID);
 	
-	@Insert(" INSERT INTO MEMBERINFO VALUES(?, ?, ?, ?, ?, ?, ?) ")
+	@Insert(" INSERT INTO MEMBERINFO VALUES(#{userid}, #{userpw}, "
+			+ "#{username}, #{gender}, #{birth}, #{height}, #{weight}) ")
 	int insert(MemberInfoDto dto);
 	
 	@Update(" UPDATE MEMBERINFO SET HEIGHT=? WHERE USERID=? ")
@@ -26,4 +27,9 @@ public interface MemberInfoMapper {
 	
 	@Select(" SELECT COUNT(USERID) FROM MEMBERINFO WHERE USERID =#{id}")
 	int idCheck(String id);
+	
+	@Select(" SELECT * FROM MEMBERINFO WHERE USERID=#{userid} AND USERPW=#{userpw}")
+	MemberInfoDto login(String userid, String userpw);
+	
+	
 }

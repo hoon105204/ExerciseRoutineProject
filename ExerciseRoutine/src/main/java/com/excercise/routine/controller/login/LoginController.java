@@ -18,17 +18,21 @@ public class LoginController {
 	@Autowired
 	private MemberInfoService memberinfoservice;
 
-	@GetMapping("login")
-	public String login() {
-		return "home";
+	@PostMapping("login")
+	public String login(String userid, String userpw) {
+		if(memberinfoservice.login(userid, userpw)!=null) {
+			return "home";
+		} else {
+			return "redirect:/";
+		}
 	}
 
-	@GetMapping("sign_up")
+	@PostMapping("sign_up")
 	public String sign_up() {
 		return "sign_up";
 	}
 
-	@GetMapping("insert")
+	@PostMapping("insert")
 	public String insert(MemberInfoDto dto) {
 		int res = memberinfoservice.insert(dto);
 		if (res > 0) {
