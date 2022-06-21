@@ -17,7 +17,7 @@ public interface ExUserMapper {
 
 	// 전체 가져오기
 	@Select(" SELECT * FROM EXCERCISE_USER ORDER BY EXDATE ")
-	List<ExUserDto> selectOne();
+	List<ExUserDto> selectAll();
 	
 	// 특정 날짜 운동기록 가져오기
 	@Select(" SELECT * FROM EXCERCISE_USER WHERE EXDATE=#{exdate} ")

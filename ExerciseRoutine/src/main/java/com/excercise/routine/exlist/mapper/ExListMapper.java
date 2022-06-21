@@ -15,7 +15,7 @@ import com.excercise.routine.exlist.dto.ExListDto;
 public interface ExListMapper {
 
 	@Select(" SELECT * FROM EXCERCISE_LIST ORDER BY LIPART ")
-	List<ExListDto> selectOne();
+	List<ExListDto> selectAll();
 	
 	@Select(" SELECT * FROM EXCERCISE_LIST WHERE LINAME=#{liname} ")
 	ExListDto selectOne(String liname);
