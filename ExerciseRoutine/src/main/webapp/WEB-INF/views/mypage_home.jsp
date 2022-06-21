@@ -1,19 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<style>
-table{
-	margin-left:auto;
-	margin-right:auto;
-}
 
-</style>
-<body bgcolor="skyblue">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
 	
@@ -41,70 +34,69 @@ table{
 	      chart.draw(data, options);
 	    }
 </script>
+
+<style>
+table{
+	margin-left:auto;
+	margin-right:auto;
+}
+</style>
+
+<body bgcolor="skyblue">
+	<h1>MyPage</h1>
+	<h2>${weightlist[1].weight}</h2>
+	<h2>${weightlist[1].memberdate}</h2>
 	
-</head>
-<body>
 <div>
-<h1>마이페이지</h1>
-</div>
-      	<form  action="/mypage/update" method="post" >
-      		
-      		<table>
+     	<table>
       		<tr>
 	      		<th>ID</th>
-	      		<td><input type="text" name="userid" value="${dto.userid }" ></td>
+	      		<td>${userinfo.userid }</td>
       		</tr>
       		<tr>
 	      		<th>이름</th>
-	      		<td><input type="text" name="name" value="${dto.name }"></td>
+	      		<td>${userinfo.username }</td>
 	      	</tr>	
       		<tr>
 	      		<th>생년월일</th>
-	      		<td><input type="date" name="birth" value="${dto.birth }"></td>
+	      		<td>${userinfo.birth }</td>
 	      	</tr>
 	      	<tr>
 	      		<th>성별</th>
-	      		<td>
-	      			<select>
-	      			<option value="M">남성</option>
-	      			<option value="F">여성</option>
-	      			</select>
-	      		</td>
+	      		<td>${userinfo.gender }</td>
 	      	</tr>
 	      	<tr>
 	      		<th>키</th>
-	      		<td><input type="text" name="height" value="${dto.height }"></td>
+	      		<td>${userinfo.height }</td>
 	      	</tr>
 	      	<tr>
 	      		<th>몸무게</th>
-	      		<td><input type="text" name="weight" value="${dto.weight }"></td>
+	      		<td>${userinfo.weight }</td>
 	      	</tr>
 	      	<tr>
 				<td colspan="2" align="right">
-					<input type="submit" value="수정완료">
-					<input type="button" value="취소" onclick="location.href='/mypage/home'">
+					<input type="button" value="수정하기" onclick="location.href='/mypage/updateform'">
 				</td>
 			</tr>
 		</table>	
-      </form>
-      
-      
+</div>	
+
 <div id="curve_chart" style="width: 900px; height: 500px"></div>
-        
-        
+
 <form action="insert" method="post">       
-	 	<Table>
-	      <tr>
-		      	<th>몸무게</th>
-		      	<td><input type="text" id="weight" value="${dto.weight }"></td>
-		  </tr>
-		  <tr>
-			 <td colspan="2" align="right">
-				<input type="submit" value="몸무게 수정">
-			 </td>
-			</tr>
-		</Table> 
-</form>     
+ 	<table>
+      <tr>
+	      	<th>몸무게</th>
+	      	<td><input type="text" id="weight" value="${userinfo.weight }"></td>
+	  </tr>
+	  <tr>
+		 <td colspan="2" align="right">
+			<input type="submit" value="몸무게 수정">
+		 </td>
+		</tr>
+	</table> 
+</form> 
+
 
 </body>
 </html>

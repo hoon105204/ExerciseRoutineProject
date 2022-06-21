@@ -1,16 +1,16 @@
-package com.excercise.mp.memberinfo.dto;
+package com.excercise.routine.weightinfo.dto;
 
 import java.util.Date;
 
-public class MypageDto {
+public class WeightInfoDto {
 	private String userid;
 	private Date memberdate;
 	private float weight;
-	public MypageDto() {
+	public WeightInfoDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MypageDto(String userid, Date memberdate, float weight) {
+	public WeightInfoDto(String userid, Date memberdate, float weight) {
 		super();
 		this.userid = userid;
 		this.memberdate = memberdate;
