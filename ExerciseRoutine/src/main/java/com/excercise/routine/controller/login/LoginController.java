@@ -57,7 +57,14 @@ public class LoginController {
 			return "redirect:/sign/sign_up";
 		}
 	}
-
+	
+	@RequestMapping("/list.do")
+	public String list(Model model) {
+		model.addAttribute("list",memberinfoservice.selectList());
+		
+		return "list";
+	}
+	
 	@PostMapping("/idCheck")
 	@ResponseBody
 	public int idCheck(@RequestParam("id") String id) {
