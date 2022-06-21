@@ -44,4 +44,10 @@ public class MemberInfoServiceImpl implements MemberInfoService {
 		return memberinfomapper.login(userid, userpw);
 	}
 
+	@Override
+	public int updateMP(MemberInfoDto dto) {
+		return memberinfomapper.updateMP(dto);
+	}
+
+
 }
