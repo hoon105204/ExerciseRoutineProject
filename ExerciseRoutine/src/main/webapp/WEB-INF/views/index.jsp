@@ -6,10 +6,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-	hello good!!!!<br><br>
-	nice!!<br>
-	every
-	not nice!!
+<body bgcolor="skyblue">
+	<div style="padding:200px;">
+		<h1><p style="text-align:center;">웹페이지 이름</p></h1>
+	</div>
+	
+	<div style="">
+		
+	</div>
 </body>
 </html>
