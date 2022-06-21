@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <style>
+table{
+	margin-left:auto;
+	margin-right:auto;
+}
 
 </style>
 <body bgcolor="skyblue">

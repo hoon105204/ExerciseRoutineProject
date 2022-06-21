@@ -34,4 +34,9 @@ public class MemberInfoServiceImpl implements MemberInfoService {
 		return memberinfomapper.update(dto);
 	}
 
+	@Override
+	public int idCheck(String id) {
+		return memberinfomapper.idCheck(id);
+	}
+
 }
