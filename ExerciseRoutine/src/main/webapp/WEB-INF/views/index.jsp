@@ -19,7 +19,7 @@
 		<h1>웹페이지 이름</h1>
 	</div>
 
-	<form action="/excercise/home" method="post">
+	<form action="/sign/login" method="post">
 		<table>
 			<tr>
 				<th>I D</th>
@@ -32,7 +32,7 @@
 			<tr>
 				<td colspan="2" align="center">
 					<input type="submit" value="로그인">
-					<input type="button" value="회원가입" onclick="location.href='sign_up.jsp'">
+					<input type="button" value="회원가입" onclick="location.href='/sign/sign_up'">
 				</td>
 			</tr>
 		</table>
