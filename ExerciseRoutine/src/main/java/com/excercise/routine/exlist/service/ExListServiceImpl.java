@@ -27,8 +27,7 @@ public class ExListServiceImpl implements ExListService {
 
 	@Override
 	public int insert(ExListDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		return exListMapper.insert(dto);
 	}
 
 	@Override

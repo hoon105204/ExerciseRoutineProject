@@ -1,46 +1,46 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(function(){
 		
 		$("button:eq(1)").click(function(){
-			$(".ÇÏÃ¼").show();
-			$(".°¡½¿").hide();
-			$(".µî").hide();
-			$(".ÆÈ").hide();
+			$(".í•˜ì²´").show();
+			$(".ê°€ìŠ´").hide();
+			$(".ë“±").hide();
+			$(".íŒ”").hide();
 		});
 		$("button:eq(2)").click(function(){
-			$(".ÇÏÃ¼").hide();
-			$(".°¡½¿").show();
-			$(".µî").hide();
-			$(".ÆÈ").hide();
+			$(".í•˜ì²´").hide();
+			$(".ê°€ìŠ´").show();
+			$(".ë“±").hide();
+			$(".íŒ”").hide();
 		});
 		$("button:eq(3)").click(function(){
-			$(".ÇÏÃ¼").hide();
-			$(".°¡½¿").hide();
-			$(".µî").show();
-			$(".ÆÈ").hide();
+			$(".í•˜ì²´").hide();
+			$(".ê°€ìŠ´").hide();
+			$(".ë“±").show();
+			$(".íŒ”").hide();
 		});
 		$("button:eq(4)").click(function(){
-			$(".ÇÏÃ¼").hide();
-			$(".°¡½¿").hide();
-			$(".µî").hide();
-			$(".ÆÈ").show();
+			$(".í•˜ì²´").hide();
+			$(".ê°€ìŠ´").hide();
+			$(".ë“±").hide();
+			$(".íŒ”").show();
 		});
 		$("button:eq(5)").click(function(){
-			$(".ÇÏÃ¼").show();
-			$(".°¡½¿").show();
-			$(".µî").show();
-			$(".ÆÈ").show();
+			$(".í•˜ì²´").show();
+			$(".ê°€ìŠ´").show();
+			$(".ë“±").show();
+			$(".íŒ”").show();
 		});
 		
 		
@@ -52,34 +52,28 @@
 		
 	});
 
-	
-
 </script>
 <style>
-#footer{
-	position: fixed;
-	bottom: 0px;
-}
 </style>
 </head>
 <body bgcolor="skyblue">
 	<h1>exlist home</h1>
 	<div>
 		<input type="text" name="filter">
-		<button type="submit">°Ë»ö</button>
+		<button type="submit">ê²€ìƒ‰</button>
 		<div>
-			<button name="ÇÏÃ¼">ÇÏÃ¼</button>
-			<button name="°¡½¿">°¡½¿</button>
-			<button name="µî">µî</button>
-			<button name="ÆÈ">ÆÈ</button>
-			<button name="ÀüÃ¼">ÀüÃ¼</button>
+			<button name="í•˜ì²´">í•˜ì²´</button>
+			<button name="ê°€ìŠ´">ê°€ìŠ´</button>
+			<button name="ë“±">ë“±</button>
+			<button name="íŒ”">íŒ”</button>
+			<button name="ì „ì²´">ì „ì²´</button>
 		</div>
 	</div>
 	<div>
 		<table border="1">
 			<thead>
-				<th>¿îµ¿ ÀÌ¸§</th>
-				<th>ºĞ·ù</th>
+				<th>ìš´ë™ ì´ë¦„</th>
+				<th>ë¶„ë¥˜</th>
 			</thead>
 			<tbody id="showlist">
 				<c:forEach items="${list}" var="dto">
@@ -92,15 +86,19 @@
 		</table>
 	</div>
 	
+	<div>
+		<input type="button" value="ìš´ë™ì¶”ê°€" onclick="location.href='/exlist/insertform'">
+	</div>
+	
 	<div id="footer">
 		<table>
 			<tr>
 				<td colspan="5" align="center">
-				<input type="button" value="È¨" onclick="location.href=''">
-				<input type="button" value="Ä¶¸°´õ" onclick="location.href=''">
-				<input type="button" value="¶óÀÌºê·¯¸®" onclick="location.href='/exlist/listhome'">
-				<input type="button" value="°Ô½ÃÆÇ" onclick="location.href=''">
-				<input type="button" value="¸¶ÀÌÆäÀÌÁö" onclick="location.href=''">
+				<input type="button" value="í™ˆ" onclick="location.href=''">
+				<input type="button" value="ìº˜ë¦°ë”" onclick="location.href=''">
+				<input type="button" value="ë¼ì´ë¸ŒëŸ¬ë¦¬" onclick="location.href='/exlist/listhome'">
+				<input type="button" value="ê²Œì‹œíŒ" onclick="location.href=''">
+				<input type="button" value="ë§ˆì´í˜ì´ì§€" onclick="location.href=''">
 				</td>
 			</tr>
 		</table>
