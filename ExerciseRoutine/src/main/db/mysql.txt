@@ -16,7 +16,7 @@ create table DAYWEIGHT(
 	WEIGHT FLOAT(4,1) not null
 );
 
--- 2. 운동계획 : EXNAME(이름), EXPART(파트), EXREP(횟수), EXSET(세트수), EXVOL(중량), EXDATE(운동한 날짜)
+-- 2. 사용자 운동 정보 : EXNAME(이름), EXPART(파트), EXREP(횟수), EXSET(세트수), EXVOL(중량), EXDATE(운동한 날짜)
 CREATE table EXCERCISE_USER(
 	EXNAME VARCHAR(1000) NOT NULL,
 	EXPART VARCHAR(1000) NOT NULL,
