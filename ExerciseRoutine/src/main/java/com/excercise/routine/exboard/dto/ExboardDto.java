@@ -2,7 +2,7 @@ package com.excercise.routine.exboard.dto;
 
 import java.util.Date;
 
-public class ExBoardDto {
+public class ExboardDto {
 	private int bno;
 	private String username;
 	private String title;
@@ -11,11 +11,11 @@ public class ExBoardDto {
 	private int btot;
 	private int ball;
 	
-	public ExBoardDto() {
+	public ExboardDto() {
 		super();
 	}
 	
-	public ExBoardDto(int bno, String username, String title, String content, Date bdate, int btot, int ball) {
+	public ExboardDto(int bno, String username, String title, String content, Date bdate, int btot, int ball) {
 		super();
 		this.bno = bno;
 		this.username = username;
