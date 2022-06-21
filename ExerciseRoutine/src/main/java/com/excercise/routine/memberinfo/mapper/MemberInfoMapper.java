@@ -24,6 +24,6 @@ public interface MemberInfoMapper {
 	@Update(" UPDATE MEMBERINFO SET HEIGHT=? WHERE USERID=? ")
 	int update(MemberInfoDto dto);
 	
-	@Select(" SELECT COUNT(USERID) FROM MEMBERINFO WHERE USERID= #{id}")
+	@Select(" SELECT COUNT(USERID) FROM MEMBERINFO WHERE USERID =#{id}")
 	int idCheck(String id);
 }

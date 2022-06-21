@@ -23,7 +23,7 @@ h1 {
         $.ajax({
             url:'/sign/idCheck', //Controller에서 인식할 주소
             type:'post', //POST 방식으로 전달
-            data:{id:id},
+            data:{"id":id},
             success:function(){
             	if(cnt != 1){ //cnt가 1이 아니면(=0일 경우) -> 사용 가능한 아이디 
                     $('.id_ok').css("display","inline-block"); 

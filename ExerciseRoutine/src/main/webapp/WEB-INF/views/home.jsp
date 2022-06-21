@@ -16,7 +16,7 @@ table{
 <body bgcolor="skyblue">
 	<table>
 		<tr>
-			<td colspan="5" align="center" align="bottom">
+			<td colspan="5" align="center">
 			<input type="button" value="홈" onclick="location.href=''">
 			<input type="button" value="캘린더" onclick="location.href=''">
 			<input type="button" value="라이브러리" onclick="location.href=''">
