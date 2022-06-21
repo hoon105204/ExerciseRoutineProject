@@ -10,8 +10,5 @@ public class ExerciseRoutineApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ExerciseRoutineApplication.class, args);
 	}
-	@GetMapping("/")
-	public String root() {
-		return "index";
-	}
+
 }

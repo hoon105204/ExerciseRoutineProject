@@ -19,7 +19,7 @@
 		<h1>웹페이지 이름</h1>
 	</div>
 
-	<form action="/" method="post">
+	<form action="/excercise/home" method="post">
 		<table>
 			<tr>
 				<th>I D</th>
