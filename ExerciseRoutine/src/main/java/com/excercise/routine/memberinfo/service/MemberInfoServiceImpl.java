@@ -12,7 +12,7 @@ import com.excercise.routine.memberinfo.mapper.MemberInfoMapper;
 public class MemberInfoServiceImpl implements MemberInfoService {
 
 	@Autowired
-	private MemberInfoMapper memberoinfomapper;
+	private MemberInfoMapper memberinfomapper;
 	
 	@Override
 	public List<MemberInfoDto> selectList() {
@@ -28,8 +28,7 @@ public class MemberInfoServiceImpl implements MemberInfoService {
 
 	@Override
 	public int insert(MemberInfoDto dto) {
-		
-		return 0;
+		return memberinfomapper.insert(dto);
 	}
 
 	@Override
