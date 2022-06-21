@@ -21,7 +21,7 @@ h1 {
 			<tr>
 				<th>I D</th>
 				<td><input type="text" name="memberid"></td>
-				<td><input type="button" value="중복확인" onclick="location.href=''"></td>
+				<td><input type="button" value="중복확인" onclick="location.href='/sign/check'"></td>
 			</tr>
 			<tr>
 				<th>P W</th>

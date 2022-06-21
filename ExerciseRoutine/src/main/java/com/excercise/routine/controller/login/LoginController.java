@@ -13,8 +13,8 @@ public class LoginController {
 	private MemberInfoService memberinfoservice;
 	
 	@GetMapping("login")
-	public String test() {
-		return null;
+	public String login() {
+		return "home";
 	}
 	
 	@GetMapping("sign_up")
@@ -26,10 +26,14 @@ public class LoginController {
 	public String insert(MemberInfoDto dto) {
 		int res = memberinfoservice.insert(dto);
 		if(res>0) {
-			return null;
+			return "redirect:/";
 		}else {
-			return null;
+			return "redirect:/sign/sign_up";
 		}
-		
+	}
+	
+	@GetMapping("check")
+	public String check() {
+		return null;
 	}
 }
