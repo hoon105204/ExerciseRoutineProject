@@ -16,11 +16,11 @@ public interface MemberInfoMapper {
 	List<MemberInfoDto> selectList();
 	
 	@Select(" SELECT * FROM MEMBERINFO WHERE USERID=? ")
-	public MemberInfoDto selectOne(String USERID);
+	MemberInfoDto selectOne(String USERID);
 	
 	@Insert(" INSERT INTO MEMBERINFO VALUES(?, ?, ?, ?, ?, ?, ?) ")
-	public int insert(MemberInfoDto dto);
+	int insert(MemberInfoDto dto);
 	
 	@Update(" UPDATE MEMBERINFO SET HEIGHT=? WHERE USERID=? ")
-	public int update(MemberInfoDto dto);
+	int update(MemberInfoDto dto);
 }
