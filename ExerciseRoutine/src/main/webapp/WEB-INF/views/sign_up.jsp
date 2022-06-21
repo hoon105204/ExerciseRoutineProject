@@ -16,7 +16,7 @@ h1 {
 </style>
 <body bgcolor="skyblue">
 	<h1>회원가입</h1>
-	<form action="" method="post">
+	<form action="/sign/insert" method="post">
 		<table>
 			<tr>
 				<th>I D</th>
