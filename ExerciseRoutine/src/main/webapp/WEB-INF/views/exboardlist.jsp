@@ -67,29 +67,10 @@ button1:hover {
 	position:absolute;
 	right:30%;
 }
-#but{
-	position: absolute;
-    bottom: 10px;
-    right:1px;
-	text-align: center;
-	width: 100%;
-	margin-top: 20px
-	
-}
-#button1 {
-	
-	width: 110px;
-	height: 60px;
-	margin-left:8px;
-	margin-right:8px;
-	border-radius: 5px;
-	text-align: center;
-}
 </style>
 </head>
 <body>
-   
-    <article>
+   <article>
       <div class="container">
          <div class="table-responsive">
          <h2>Exboard list</h2>
@@ -130,7 +111,7 @@ button1:hover {
             </table>
          </div>
          <div id="btn1">
-            <button class="btn btn-primary" type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
+            <button type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
          </div>
          </div>
    </article>

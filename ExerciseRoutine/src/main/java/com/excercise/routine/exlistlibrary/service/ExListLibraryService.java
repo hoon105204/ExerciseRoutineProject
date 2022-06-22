@@ -8,5 +8,8 @@ public interface ExListLibraryService {
 
 	public List<ExListLibraryDto> selectAll();
 	public ExListLibraryDto selectOne(String liname);
-	
+	public int insert(ExListLibraryDto dto);
+	public int update(ExListLibraryDto dto);
+	public int delete(String liname);
+		
 }

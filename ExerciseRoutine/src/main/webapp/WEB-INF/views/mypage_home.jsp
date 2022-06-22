@@ -3,8 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet"
-href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <head>
 <meta charset="UTF-8">
 
@@ -51,6 +49,16 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 </script>
 
 <style>
+#wtag{
+	width:35pt;
+}
+#mpup{
+	width:100%;
+	paddig-left:15px;
+	paddig-right:15px;
+	margin-left:auto;
+	margin-right:auto;
+}
 table{
 	margin-left:auto;
 	margin-right:auto;
@@ -134,20 +142,20 @@ h1{
  	<table>
       <tr>
 	      	<th>몸무게</th>
-	      	<td><input class="form-control" type="text" name="weight" value="${userinfo.weight }"></td>
+	      	<td><input class="form-control" type="text" name="weight" id="wtag" value="${userinfo.weight }"></td>
 	  </tr>
 	  <tr>
-		 <td colspan="2" align="center">
-			<input class="btn btn-outline-primary" type="submit" value="몸무게 기록 갱신">
+		 <td colspan="2" align="right">
+			<input class="btn btn-outline-primary" type="submit" id="mpup" value="몸무게 기록 갱신">
 		 </td>
-		</tr>
+	  </tr>
 	</table> 
 </form> 
 
 	<div id="but">
 		<span>
 			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
-			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href='/exuser/exuserhome'">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href='/calendar/calendarhome'">
 			<input class="btn btn-primary" type="button" id="button1" value="라이브러리"onclick="location.href='/exlist/listhome'">
 			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
 			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">

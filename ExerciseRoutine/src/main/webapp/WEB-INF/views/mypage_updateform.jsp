@@ -11,6 +11,10 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <body>
 	
 <style>
+h1{
+	text-align: center;
+	color: blue;
+}
 table{
 	margin-left:auto;
 	margin-right:auto;
@@ -26,8 +30,10 @@ h1{
 }
 </style>
 
+
 <body class="p-3 mb-2 bg-light text-dark">
-	<h1>mypage updateform</h1>
+	<h1>MYPAGE UPDATEFORM</h1>
+
 <div>
 	<div class="col-sm-6">
 	<form action="updateres.do" method="post">

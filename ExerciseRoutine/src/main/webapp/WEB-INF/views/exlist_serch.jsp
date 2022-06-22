@@ -55,9 +55,6 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 
 </script>
 <style>
-table{
-	text-align: center;
-}
 #but{
 	position: relative;
 	text-align: center;
@@ -65,6 +62,7 @@ table{
 	margin-top: 20px
 }
 #button1 {
+	
 	width: 110px;
 	height: 60px;
 	margin-left:8px;
@@ -72,57 +70,46 @@ table{
 	border-radius: 5px;
 	text-align: center;
 }
-.col-sm-6{
-	margin-left:auto;
-	margin-right:auto;
-	text-align : center;
-}
 </style>
 </head>
-<body class="text-center">
+<body class="p-3 mb-2 bg-light text-dark">
 	<h1>exlist home</h1>
 	<div>
 		<input type="text" name="filter">
-		<button class="btn btn-outline-primary" type="submit">검색</button>
+		<button type="submit">검색</button>
 		<div>
-			<button class="btn btn-outline-primary" name="하체">하체</button>
-			<button class="btn btn-outline-primary" name="가슴">가슴</button>
-			<button class="btn btn-outline-primary" name="등">등</button>
-			<button class="btn btn-outline-primary" name="팔">팔</button>
-			<button class="btn btn-outline-primary" name="전체">전체</button>
+			<button name="하체">하체</button>
+			<button name="가슴">가슴</button>
+			<button name="등">등</button>
+			<button name="팔">팔</button>
+			<button name="전체">전체</button>
 		</div>
 	</div>
-	<div id="list">
-		<div class="col-sm-6">
-		<table class="table">
-			<tr>
-				<th scope="col">운동 이름</th>
-				<th scope="col">분류</th>
-			</tr>
+	<div>
+		<table border="1">
+			<thead>
+				<th>운동 이름</th>
+				<th>분류</th>
+				<th>체크</th>
+			</thead>
 			<tbody id="showlist">
 				<c:forEach items="${list}" var="dto">
 					<tr class="${dto.lipart}" name="${dto.liname}">
-						<td scope="row">${dto.liname}</td>
+						<td>${dto.liname}</td>
 						<td>${dto.lipart}</td>
+						<td>
+						<input type="checkbox" name="list">
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
-		</div>
 	</div>
 	
-	<div>
-		<input class="btn btn-outline-primary" type="button" value="운동추가" onclick="location.href='/exlist/insertform'">
-		<input class="btn btn-outline-primary" type="button" value="운동삭제" onclick="location.href='/exlist/deleteform'">
-	</div>
 	
 	<div id="but">
 		<span>
-			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
-			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href='/calendar/calendarhome'">
-			<input class="btn btn-primary" type="button" id="button1" value="라이브러리" onclick="location.href='/exlist/listhome'">
-			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
-			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+			<input type="submit" value="선택한 운동 추가하기(개수)" onclick="location.href='/exuser/exuserhome'">
 		</span>
 	</div>
 </body>
