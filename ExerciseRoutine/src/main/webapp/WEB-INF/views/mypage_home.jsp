@@ -94,6 +94,11 @@ text-align: center;
 h1{
 	text-align: center
 }
+#curve_chart{
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
 </style>
 
 
