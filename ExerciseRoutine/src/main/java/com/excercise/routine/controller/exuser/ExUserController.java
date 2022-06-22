@@ -23,11 +23,10 @@ public class ExUserController {
 	
 	@GetMapping("/exuserhome")
 	public String exuserhome(Model model, HttpServletRequest request) {
-		// 로그인과 연동 필요
 		// String userid = (String)request.getSession().getAttribute("userid");
 		String userid = "user1";
 		// 날짜와 연동 필요
-		String now = "2022-06-23";
+		String now = "2022-06-22";
 		
 		List<ExUserDto> list = exuserService.selectDate(userid, now);
 		model.addAttribute("list", list);
