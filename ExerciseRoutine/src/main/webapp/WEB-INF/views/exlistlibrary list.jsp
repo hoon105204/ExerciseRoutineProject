@@ -21,13 +21,11 @@
 <style type="text/css">
 body {
    padding-top: 30px;
+   overflow: auto;
 }
 #btn{
    text-align: center;
-   position: absolute;
-   bottom: 5%;
-   left: 50%;
-   transform: translate(-50%, 0);
+   padding-bottom: 30px;
 }
 button {
   margin: 0px 3px;
@@ -43,15 +41,12 @@ button:hover {
 }
 #exbtn{
 	text-align: center;
-	margin: 5px;
+	margin: 10px;
 	font-size: 14px;
 }
 #search {
 	text-align: center;
 	font-size: 13px;
-}
-#showlist {
-	
 }
 </style>
 <script type="text/javascript">
@@ -96,7 +91,6 @@ button:hover {
 		});
 		
 	});
-
 </script>
 <style>
 </style>
@@ -105,6 +99,7 @@ button:hover {
       <div class="container">
          <div class="table-responsive">
 	<h2>Exlistlibrary</h2>
+<div id="scrool">
 	<div id="search">
 		<input type="text" name="filter">
 		<button type="submit">검색</button>
@@ -129,12 +124,16 @@ button:hover {
 					</tr>
 				</c:forEach>
 			</tbody>
-		</table>	
+		</table>
+		<div id="exbtn">
+			<button type="button" value="운동추가" onclick="location.href='/exlistlibrary/insertform'">운동추가</button>
+			<button type="button" value="운동삭제" onclick="location.href='/exlistlibrary/deleteform'">운동삭제</button>
+		</div>	
 	<div id="footer" >
 		<div id="btn">
 			<tr>
 				<td colspan="5" align="center">
-				<button type="button" value="홈" onclick="location.href=''">홈</button>
+				<button type="button" value="홈" onclick="location.href='/sign/home'">홈</button>
 				<button type="button" value="캘린더" onclick="location.href='/calendar/calendarhome'">캘린더</button>
 				<button type="button" value="라이브러리" onclick="location.href='/exlistlibrary/list'">라이브러리</button>
 				<button type="button" value="게시판" onclick="location.href='/exboard/list'">게시판</button>
@@ -144,7 +143,8 @@ button:hover {
 		</div>
 	</div>
 	</div>
-	</div>	
+	</div>
+	</div>
 	</article>
 </body>
 </html>

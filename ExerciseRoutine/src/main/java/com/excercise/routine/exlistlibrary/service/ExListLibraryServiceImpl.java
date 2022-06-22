@@ -24,4 +24,19 @@ public class ExListLibraryServiceImpl implements ExListLibraryService {
 		return exListlivraryMapper.selectOne(liname);
 	}
 
+	@Override
+	public int insert(ExListLibraryDto dto) {
+		return exListlivraryMapper.insert(dto);
+	}
+
+	@Override
+	public int update(ExListLibraryDto dto) {
+		return exListlivraryMapper.update(dto);
+	}
+
+	@Override
+	public int delete(String liname) {
+		return exListlivraryMapper.delete(liname);
+	}
+	
 }
