@@ -57,31 +57,31 @@ button:hover {
 <script type="text/javascript">
 	$(function(){
 		
-		$("button:eq(1)").click(function(){
+		$("button:eq(2)").click(function(){
 			$(".하체").show();
 			$(".가슴").hide();
-			$(".등").hide();
-			$(".팔").hide();
-		});
-		$("button:eq(2)").click(function(){
-			$(".하체").hide();
-			$(".가슴").show();
 			$(".등").hide();
 			$(".팔").hide();
 		});
 		$("button:eq(3)").click(function(){
 			$(".하체").hide();
-			$(".가슴").hide();
-			$(".등").show();
+			$(".가슴").show();
+			$(".등").hide();
 			$(".팔").hide();
 		});
 		$("button:eq(4)").click(function(){
 			$(".하체").hide();
 			$(".가슴").hide();
+			$(".등").show();
+			$(".팔").hide();
+		});
+		$("button:eq(5)").click(function(){
+			$(".하체").hide();
+			$(".가슴").hide();
 			$(".등").hide();
 			$(".팔").show();
 		});
-		$("button:eq(5)").click(function(){
+		$("button:eq(6)").click(function(){
 			$(".하체").show();
 			$(".가슴").show();
 			$(".등").show();
@@ -89,7 +89,7 @@ button:hover {
 		});
 		
 		
-		$("button:eq(0)").click(function(){
+		$("button:eq(1)").click(function(){
 			let filter = $("input[name=filter]").val();
 			$("#showlist tr[name*="+filter+"]").show();
 			$("#showlist tr").not("[name*="+filter+"]").hide();

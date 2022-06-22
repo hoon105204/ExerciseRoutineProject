@@ -1,5 +1,8 @@
 package com.excercise.routine.controller.exboard;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +42,7 @@ public class ExboardController {
    
    @RequestMapping("/insert")
    public String insert(ExboardDto dto) {
-      
+
       if(exboardService.insert(dto) > 0) {
          return "redirect:/exboard/list";
       } else {

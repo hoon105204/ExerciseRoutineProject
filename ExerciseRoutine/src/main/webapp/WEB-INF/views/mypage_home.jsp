@@ -147,7 +147,7 @@ h1{
  	<table>
       <tr>
 	      	<th>몸무게</th>
-	      	<td><input class="form-control" type="text" name="weight" id="wtag" value="${userinfo.weight }"></td>
+	      	<td><input style="width: 60px;" class="form-control" type="text" name="weight" id="wtag" value="${userinfo.weight }"></td>
 	  </tr>
 	  <tr>
 		 <td colspan="2" align="right">
