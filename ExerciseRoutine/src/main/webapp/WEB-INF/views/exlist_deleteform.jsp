@@ -51,22 +51,36 @@
 	});
 
 </script>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+<style type="text/css">
+.col-sm-6{
+	margin-left:auto;
+	margin-right:auto;
+	text-align : center;
+}
+table{
+	text-align : center;
+}
+</style>
 </head>
-<body bgcolor="lightpink">
-	<h1>exlist_deleteform <a href="/exlist/listhome" style="text-decoration: none;">돌아가기</a></h1>
+<body class="text-center">
+	<h1>exlist_deleteform</h1>
+	<a href="/exlist/listhome" style="text-decoration: none;">돌아가기</a>
 	<div>
 		<input type="text" name="filter">
-		<button type="submit">검색</button>
+		<button class="btn btn-outline-primary" type="submit">검색</button>
 		<div>
-			<button name="하체">하체</button>
-			<button name="가슴">가슴</button>
-			<button name="등">등</button>
-			<button name="팔">팔</button>
-			<button name="전체">전체</button>
+			<button class="btn btn-outline-primary" name="하체">하체</button>
+			<button class="btn btn-outline-primary" name="가슴">가슴</button>
+			<button class="btn btn-outline-primary" name="등">등</button>
+			<button class="btn btn-outline-primary" name="팔">팔</button>
+			<button class="btn btn-outline-primary" name="전체">전체</button>
 		</div>
 	</div>
 	<div>
-		<table border="1">
+		<div class="col-sm-6">
+		<table class="table">
 			<thead>
 				<th>운동 이름</th>
 				<th>분류</th>
@@ -78,12 +92,13 @@
 						<td>${dto.liname}</td>
 						<td>${dto.lipart}</td>
 						<td>
-							<button onclick="location.href='/exlist/delete?liname=${dto.liname}'">삭제</button>
+							<button class="btn btn-outline-primary" onclick="location.href='/exlist/delete?liname=${dto.liname}'">삭제</button>
 						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
+		</div>
 	</div>
 </body>
 </html>
