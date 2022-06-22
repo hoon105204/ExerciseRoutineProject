@@ -8,6 +8,8 @@
 <head>
 <meta charset="EUC-KR">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
     <link href='${pageContext.request.contextPath }/resources/fullcalendar/main.css' rel='stylesheet' />
     <script src='${pageContest.request.contextPath }/resources/fullcalendar/main.js'></script>
 <style>

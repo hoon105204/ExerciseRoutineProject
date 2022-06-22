@@ -58,4 +58,9 @@ public class ExListController {
 		}
 	}
 	
+	@GetMapping("/exlist_serch")
+	public String Serch(Model model) {
+		model.addAttribute("list",exListService.selectAll());
+		return "exlist_serch";
+	}
 }
