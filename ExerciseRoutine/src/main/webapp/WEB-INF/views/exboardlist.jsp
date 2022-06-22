@@ -43,6 +43,20 @@ thead .text-center {
  color: #0093e9;
  margin: 30px 0;
 }
+#but{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px
+}
+#button1 {
+	width: 110px;
+	height: 60px;
+	margin-left:8px;
+	margin-right:8px;
+	border-radius: 5px;
+	text-align: center;
+}
 </style>
 </head>
 <body>
@@ -91,6 +105,16 @@ thead .text-center {
             <button type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
          </div>
          </div>
+         
    </article>
+   <div id="but">
+		<span>
+			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
+			<input class="btn btn-primary" type="button" id="button1" value="라이브러리" onclick="location.href='/exlist/listhome'">
+			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+		</span>
+	</div>
 </body>
 </html>

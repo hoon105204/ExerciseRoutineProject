@@ -10,8 +10,13 @@
 href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <style>
 #but{
-	margin-top:50px;
+	position: relative;
+    bottom: 10px;
+    right:1px;
 	text-align: center;
+	width: 100%;
+	margin-top: 20px
+
 }
 #button1 {
 	
@@ -49,7 +54,7 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 		<h3>이번주 운동</h3>
 	</div>
 	<div id="image">
-		<img src="https://dimg.donga.com/wps/NEWS/IMAGE/2021/04/12/106357558.1.jpg" onclick="location.href=''">
+		<img src="http://newsimg.hankookilbo.com/2018/03/07/201803070494276763_1.jpg" onclick="location.href=''">
 	</div>
 	<div id="text">
 		<h3>루틴 추천 운동</h3>
@@ -59,7 +64,7 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 		<span>
 			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
 			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
-			<input class="btn btn-primary" type="button" id="button1" value="라이브러리"onclick="location.href='/exlist/listhome'">
+			<input class="btn btn-primary" type="button" id="button1" value="라이브러리" onclick="location.href='/exlist/listhome'">
 			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
 			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
 		</span>

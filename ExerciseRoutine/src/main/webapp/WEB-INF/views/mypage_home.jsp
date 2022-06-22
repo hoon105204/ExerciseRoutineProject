@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 </head>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -41,9 +43,26 @@ table{
 	margin-left:auto;
 	margin-right:auto;
 }
+#but{
+	position: relative;
+    bottom: 10px;
+    right:1px;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px
+}
+#button1 {
+	
+	width: 110px;
+	height: 60px;
+	margin-left:8px;
+	margin-right:8px;
+	border-radius: 5px;
+	text-align: center;
+}
 </style>
 
-<body bgcolor="skyblue">
+<body class="p-3 mb-2 bg-light text-dark">
 	<h1>MyPage</h1>
 	<h2>${weightlist[1].weight}</h2>
 	<h2>${weightlist[1].memberdate}</h2>
@@ -100,18 +119,14 @@ table{
 	</table> 
 </form> 
 
-	<div id="footer">
-		<table>
-			<tr>
-				<td colspan="5" align="center">
-				<input type="button" value="홈" onclick="location.href=''">
-				<input type="button" value="캘린더" onclick="location.href=''">
-				<input type="button" value="라이브러리" onclick="location.href='/exlist/listhome'">
-				<input type="button" value="게시판" onclick="location.href=''">
-				<input type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
-				</td>
-			</tr>
-		</table>
+	<div id="but">
+		<span>
+			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
+			<input class="btn btn-primary" type="button" id="button1" value="라이브러리"onclick="location.href='/exlist/listhome'">
+			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+		</span>
 	</div>
 </body>
 </html>
