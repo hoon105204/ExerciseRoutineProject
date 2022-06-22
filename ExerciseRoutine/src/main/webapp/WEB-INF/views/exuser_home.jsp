@@ -74,7 +74,7 @@ h3{
 		<c:choose>
 			<c:when test="${empty list }">
 					<h3>--------오늘의 운동이 없습니다--------<h3><br>
-					<input type="button" value="운동 추가하기" onclick="location.href=''">
+					<input type="button" value="운동 추가하기" onclick="location.href='/exlist/exlist_serch'">
 			</c:when>
 			<c:otherwise>
 				<h1>${date} 운동 리스트</h1>
