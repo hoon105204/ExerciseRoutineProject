@@ -42,6 +42,11 @@ h3{
 	border-radius: 5px;
 	text-align: center;
 }
+#date{
+	margin-left:auto;
+	margin-right:auto;
+	text-align : center;
+}
 </style>
 <script type="text/javascript">
 	function addset(obj) {
@@ -51,10 +56,12 @@ h3{
 <body>
 <div id="head">
 	<h3>날자입력</h3>
+	<div id="date">
 	<form action="/exuser/exuserhome2">
 		<input type="text" name="date" value="${date}">
-		<input type="submit" value="확인">
+		<input class="btn btn-outline-primary" type="submit" value="확인">
 	</form>
+	</div>
 </div>
 <div id="todaylist">
 <div class="col-sm-6">
@@ -65,7 +72,7 @@ h3{
 			</c:when>
 			<c:otherwise>
 				<h1>${date} 운동 리스트</h1>
-				<table border="1">
+				<table class="table">
 					<tr>
 						<th>순서</th>
 						<th>운동이름</th>
@@ -82,8 +89,8 @@ h3{
 								<td colspan="7" align="right">
 									<input class="btn btn-outline-primary" type="button" value="${dto.exname}삭제" 
 									onclick="location.href='/exuser/delete?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
-									<input type="button" value="세트삭제" onclick="location.href='/exuser/delLast?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
-									<button id="${dto.exno}" onclick="addset(this)">세트추가</button>
+									<input class="btn btn-outline-primary" type="button" value="세트삭제" onclick="location.href='/exuser/delLast?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
+									<button class="btn btn-outline-primary" id="${dto.exno}" onclick="addset(this)">세트추가</button>
 								</td>
 							</tr>
 						</c:if>
@@ -105,16 +112,16 @@ h3{
 								</c:otherwise>
 							</c:choose>
 						</tr>
-
 					</c:forEach>
 			</c:otherwise>
 		</c:choose>
+		</table>
 		</div>
 </div>
 <div id="complete">
-	<input type="button" value="운동추가" onclick="">
-	<input type="button" value="불러오기" onclick="">
-	<button type="submit">저장</button>
+	<input class="btn btn-outline-primary" type="button" value="운동추가" onclick="">
+	<input class="btn btn-outline-primary" type="button" value="불러오기" onclick="">
+	<button class="btn btn-outline-primary" type="submit">저장</button>
 </div>
 <div id="but">
 		<span>
