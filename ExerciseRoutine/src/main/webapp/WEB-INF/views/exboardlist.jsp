@@ -43,11 +43,35 @@ thead .text-center {
  color: #0093e9;
  margin: 30px 0;
 }
+#btn{
+   text-align: center;
+   position: absolute;
+   bottom: 5%;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+button1 {
+  margin: 0px 3px;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0px;
+  text-align: center;
+}
+button1:hover {
+  color: white;
+  background-color: #0093e9;
+  transition: 250ms ease-out;
+}
+#btn1 {
+	position:absolute;
+	right:30%;
+}
 </style>
 </head>
 <body>
    
-   <article>
+    <article>
       <div class="container">
          <div class="table-responsive">
          <h2>Exboard list</h2>
@@ -87,10 +111,19 @@ thead .text-center {
                </tbody>
             </table>
          </div>
-         <div>
+         <div id="btn1">
             <button type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
          </div>
          </div>
+         <div id="btn">
+     		<span>
+         		<button type="button" value="홈" onclick="location.href='/sign/home'">홈</button>
+         		<button type="button" value="캘린더" onclick="location.href=''">캘린더</button>
+         		<button type="button" value="라이브러리" onclick="location.href='exlistlibrary/list'">라이브러리</button>
+         		<button type="button" value="게시판" onclick="location.href='exboard/list'">게시판</button>
+         		<button type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome''">마이페이지</button>
+      		</span>
+   		</div>
    </article>
 </body>
 </html>

@@ -3,9 +3,55 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
+<style>
+#form{
+	width:100%;
+	padding-left:0%;
+	padding-right:26%;
+	margin-right: auto;
+  	margin-left: auto;
+	text-align: left;
+}
+th{
+	
+}
+h1{
+	text-align: center;
+}
+#curve_chart{
+	width:100%;
+	padding-left:15px;
+	padding-right:15px;
+	margin-right: auto;
+  	margin-left: auto;
+}
+#but{
+	margin-top:50px;
+	text-align: center;
+}
+#button1 {
+	
+	width: 110px;
+	height: 60px;
+	margin-left:8px;
+	margin-right:8px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+
+#text{
+	text-align: center;
+
+}
+</style>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>My Page-home</title>
 </head>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -16,17 +62,10 @@
 	
 	function drawChart() {
 		
-			
-			/*console.log(${item.memberdate});
-		 	 //var data = google.visualization.DataTable([
-			/*data.addColumn('weight','체중');
-			data.addRow('memberdate','날짜');*/
 			var weightlist = '${weightlist}';
 			console.log(weightlist);
 			var weightlist0 = weightlist.split(',');
 			console.log(weightlist0);
-			
-			
 			
 			var table_data = [];
 			for(let value of weightlist0){
@@ -34,23 +73,14 @@
 			    	table_data.push(["${item.memberdate}",  "${item.weight}"])
 			    </c:forEach>
 			};
-			console.log(table_data);
-			
 			var data = new google.visualization.arrayToDataTable([
-			//data.addColumn('date', 'memberdate')
-			//data.addColumn('number', 'weight')
 			['Date', 'weight'],
 			<c:forEach items="${weightlist}" var="item">['${item.memberdate}',  ${item.weight}],
 			</c:forEach>
-			
-			/*['${weightlist[0].memberdate}',${weightlist[0].weight}],
-	       	['${weightlist[1].memberdate}',${weightlist[1].weight}],
-			['${weightlist[2].memberdate}',${weightlist[2].weight}],
-			['${weightlist[3].memberdate}',${weightlist[3].weight}]*/
 	     	]);
 	
 	      var options = {
-	        title: '체중 변화',
+	        title: '체중 변화 그래프',
 	        legend: { position: 'bottom' }
 	      };
 	
@@ -67,9 +97,9 @@ table{
 }
 </style>
 
-<body bgcolor="skyblue">
+<body>
 	<h1>MyPage</h1>
-<div>
+<div id="form">
      	<table>
       		<tr>
 	      		<th>ID</th>
@@ -103,7 +133,7 @@ table{
 		</table>	
 </div>	
 
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
+<div id="curve_chart" style="width: 1000px; height: 450px"></div>
 
 <form action="insert.do" method="post"> 
 	<input type="hidden" name="userid" value="${userinfo.userid }">  
@@ -114,24 +144,20 @@ table{
 	  </tr>
 	  <tr>
 		 <td colspan="2" align="right">
-			<input type="submit" value="몸무게 수정">
+			<input type="submit" value="몸무게 기록 갱신">
 		 </td>
 		</tr>
 	</table> 
 </form> 
 
-	<div id="footer">
-		<table>
-			<tr>
-				<td colspan="5" align="center">
-				<input type="button" value="홈" onclick="location.href=''">
-				<input type="button" value="캘린더" onclick="location.href=''">
-				<input type="button" value="라이브러리" onclick="location.href='/exlist/listhome'">
-				<input type="button" value="게시판" onclick="location.href=''">
-				<input type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
-				</td>
-			</tr>
-		</table>
-	</div>
+<div id="but">
+		<span>
+			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
+			<input class="btn btn-primary" type="button" id="button1" value="라이브러리"onclick="location.href='/exlist/listhome'">
+			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+		</span>
+</div>
 </body>
 </html>
