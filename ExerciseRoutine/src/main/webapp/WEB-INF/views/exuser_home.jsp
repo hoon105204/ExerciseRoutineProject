@@ -32,7 +32,6 @@ h3{
 	text-align: center;
 	width: 100%;
 	margin-top: 20px
-
 }
 #button1 {
 	
