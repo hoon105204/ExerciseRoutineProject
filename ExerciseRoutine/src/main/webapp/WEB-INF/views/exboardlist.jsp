@@ -119,8 +119,8 @@ button1:hover {
      		<span>
          		<button type="button" value="홈" onclick="location.href='/sign/home'">홈</button>
          		<button type="button" value="캘린더" onclick="location.href=''">캘린더</button>
-         		<button type="button" value="라이브러리" onclick="location.href='exlistlibrary/list'">라이브러리</button>
-         		<button type="button" value="게시판" onclick="location.href='exboard/list'">게시판</button>
+         		<button type="button" value="라이브러리" onclick="location.href='/exlistlibrary/list'">라이브러리</button>
+         		<button type="button" value="게시판" onclick="location.href='/exboard/list'">게시판</button>
          		<button type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome''">마이페이지</button>
       		</span>
    		</div>
