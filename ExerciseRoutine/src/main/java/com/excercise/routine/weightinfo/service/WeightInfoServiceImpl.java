@@ -25,8 +25,10 @@ public class WeightInfoServiceImpl implements WeightInfoService{
 	}
 
 	@Override
-	public List<WeightInfoDto> selectD(String userid) {
-		return mpmemberinfo.selectD(userid);
+	public List<WeightInfoDto> selectD(String USERID) {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 
 }

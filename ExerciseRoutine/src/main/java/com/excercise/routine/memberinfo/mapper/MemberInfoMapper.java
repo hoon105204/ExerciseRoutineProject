@@ -33,7 +33,7 @@ public interface MemberInfoMapper {
 	@Select(" SELECT * FROM MEMBERINFO WHERE USERID=#{userid} AND USERPW=#{userpw}")
 	MemberInfoDto login(String userid, String userpw);
 
-	@Update(" UPDATE MEMBERINFO SET USERNAME=#{dto.username}, BIRTH=#{dto.birth}, GENDER=#{dto.gender}, HEIGHT=#{dto.height}, WEIGHT=#{dto.weight} WHERE USERID=#{dto.userid} ")
+	@Update(" UPDATE MEMBERINFO SET USERNAME=#{username}, BIRTH=#{birth}, GENDER=#{gender}, HEIGHT=#{height}, WEIGHT=#{weight} WHERE USERID=#{userid} ")
 	int updateMP(MemberInfoDto dto);
 	
 	
