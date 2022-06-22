@@ -47,30 +47,6 @@ public class ExUserController {
 		return "exuser_home";
 	}
 	
-	@GetMapping("/exuserhome11")
-	public String exuserhome11(Model model, HttpServletRequest request) {
-		String userid = (String)request.getSession().getAttribute("userid");
-		Date datenow = new Date();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		
-		String now = format.format(datenow);
-		
-		List<ExUserDto> list = exuserService.selectDate(userid, now);
-		model.addAttribute("list", list);
-		model.addAttribute("date", now);
-		return "exuser_home2";
-	}
-	
-	@GetMapping("/exuserhome12")
-	public String exuserhome12(Model model, HttpServletRequest request, String date) {
-		String userid = (String)request.getSession().getAttribute("userid");
-
-		List<ExUserDto> list = exuserService.selectDate(userid, date);
-		model.addAttribute("list", list);
-		model.addAttribute("date", date);
-		return "exuser_home2";
-	}
-
 	
 	@GetMapping("/delete")
 	public String deleteSet(ExUserDto dto) {

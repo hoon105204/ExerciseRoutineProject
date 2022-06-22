@@ -61,11 +61,11 @@ h3{
 <body>
 
 <div id="head">
-	<h3>날자입력</h3>
+	<h3>날짜입력</h3>
 	<div id="date">
 	<form action="/exuser/exuserhome2">
 		<input type="text" name="date" value="${date}">
-		<input class="btn btn-outline-primary" type="submit" value="확인">
+		<input class="btn btn-primary" type="submit" value="확인">
 	</form>
 	</div>
 </div>
@@ -77,30 +77,25 @@ h3{
 					<input type="button" value="운동 추가하기" onclick="location.href='/exlist/exlist_serch'">
 			</c:when>
 			<c:otherwise>
-				<h1>${date} 운동 리스트</h1>
+				<h1>${date} 운동 리스트</h1><br>
+				
+				<c:set var="done_loop" value="false"/>
+				
+			<c:forEach var="mynum" begin="1" end="4" step="1">
+
+				<div>
 				<table class="table">
-					<tr>
-						<th>순서</th>
-						<th>운동이름</th>
-						<th>타입</th>
-						<th>SET</th>	
-						<th>REP</th>	
-						<th>VOL</th>
-						<th>확인</th>
-					</tr>
-					<c:forEach items="${list}" var="dto">
-						
-						<c:if test="${dto.exset eq 1}">
-							<tr>
-								<td colspan="7" align="right">
-									<input class="btn btn-outline-primary" type="button" value="${dto.exname}삭제" 
-									onclick="location.href='/exuser/delete?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
-									<input class="btn btn-outline-primary" type="button" value="세트삭제" onclick="location.href='/exuser/delLast?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
-									<button class="btn btn-outline-primary" id="${dto.exno}" onclick="addset(this)">세트추가</button>
-								</td>
-							</tr>
-						</c:if>
-						
+					<colgroup>
+						<col width="30">
+						<col width="100">
+						<col width="50">
+						<col width="40">
+						<col width="50">
+						<col width="50">
+						<col width="50">
+					</colgroup>
+					<c:forEach items="${list}" var="dto"> 
+						<c:if test="${dto.exno eq mynum}">
 						<tr>
 							<td>${dto.exno}</td>
 							<td>${dto.exname}</td>
@@ -117,9 +112,24 @@ h3{
 									<td><input type="checkbox" checked="checked"></td>
 								</c:otherwise>
 							</c:choose>
+							
 						</tr>
+
+							<c:if test="${dto.exset eq 1}">
+								<br>
+								<input class="btn btn-outline-primary" type="button" value="${dto.exname}삭제" 
+								onclick="location.href='/exuser/delete?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
+								<input class="btn btn-outline-primary" type="button" value="세트삭제" onclick="location.href='/exuser/delLast?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
+								<button class="btn btn-outline-primary" data-exno="${dto.exno}" data-exname="${dto.exname }" data-expart="${dto.expart }" onclick="addset(this)">세트추가</button>
+							</c:if>
+						</c:if>
 					</c:forEach>
-			</c:otherwise>
+				</table>
+				</div>
+					<br>
+
+			</c:forEach>
+		</c:otherwise>
 		</c:choose>
 		</table>
 		</div>

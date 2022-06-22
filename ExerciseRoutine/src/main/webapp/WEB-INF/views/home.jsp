@@ -55,7 +55,7 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 		<h3>이번주 운동</h3>
 	</div>
 	<div id="image">
-		<img src="http://newsimg.hankookilbo.com/2018/03/07/201803070494276763_1.jpg" onclick="location.href='/exlist/listhome'">
+		<img src="http://newsimg.hankookilbo.com/2018/03/07/201803070494276763_1.jpg" onclick="location.href='/exlistlibrary/list'">
 	</div>
 	<div id="text">
 		<h3>루틴 추천 운동</h3>
