@@ -9,6 +9,7 @@
 <link rel="stylesheet"
 href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <style>
+
 #but{
 	position: relative;
     bottom: 10px;
