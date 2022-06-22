@@ -12,6 +12,7 @@ public class MemberInfoDto {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public MemberInfoDto(String userid, String userpw, String username, String gender, String birth, float height,
 			float weight) {
 		super();

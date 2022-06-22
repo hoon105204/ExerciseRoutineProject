@@ -9,6 +9,7 @@ public interface MemberInfoService {
 	public MemberInfoDto selectOne(String USERID);
 	public int insert(MemberInfoDto dto);
 	public int update(MemberInfoDto dto);
+	public int updateMP(MemberInfoDto dto);
 	public int idCheck(String id);
 	public MemberInfoDto login(String userid, String userpw);
 }

@@ -29,7 +29,7 @@ public class ExListController {
 	}
 	
 	@PostMapping("/insert")
-	public String insert(ExListDto dto, Model model) {
+	public String insert(ExListDto dto) {
 		int res = exListService.insert(dto);
 		
 		if(res>0) {
@@ -38,6 +38,23 @@ public class ExListController {
 		} else {
 			System.out.println("[exlist] : 운동 추가 실패");
 			return "redirect:/exlist/insertform";
+		}
+	}
+	
+	@GetMapping("/deleteform")
+	public String deleteform(Model model) {
+		model.addAttribute("list",exListService.selectAll());
+		return "exlist_deleteform";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(String liname) {
+		int res = exListService.delete(liname);
+		
+		if(res>0) {
+			return "redirect:/exlist/listhome";
+		} else {
+			return "redirect:/exlist/deleteform";
 		}
 	}
 	

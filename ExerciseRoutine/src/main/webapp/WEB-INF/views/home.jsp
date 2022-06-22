@@ -7,17 +7,16 @@
 <title>Insert title here</title>
 </head>
 <style>
-
 #but{
-	position : absolute;
-	top: 100%;
-	left:50%;
-	transform : translate(-50%,-100%);
+
+	text-align: center;
 }
+
 #button1 {
 	width: 90px;
 	height: 60px;
-	margin-left:15px;
+	margin-left:8px;
+	margin-right:8px;
 	border-radius: 5px;
 }
 
@@ -50,12 +49,15 @@
 	<div id="text">
 		<h3>루틴 추천 운동</h3>
 	</div>
+	 
 	<div id="but">
-		<input type="button" id="button1" value="홈" onclick="location.href=''">
-		<input type="button" id="button1" value="캘린더" onclick="location.href=''">
-		<input type="button" id="button1" value="라이브러리"onclick="location.href=''">
-		<input type="button" id="button1" value="게시판" onclick="location.href=''">
-		<input type="button" id="button1" value="마이페이지" onclick="location.href=''">
+		<span>
+			<input type="button" id="button1" value="홈" onclick="location.href=''">
+			<input type="button" id="button1" value="캘린더" onclick="location.href=''">
+			<input type="button" id="button1" value="라이브러리"onclick="location.href=''">
+			<input type="button" id="button1" value="게시판" onclick="location.href=''">
+			<input type="button" id="button1" value="마이페이지" onclick="location.href=''">
+		</span>
 	</div>
 </body>
 </html>

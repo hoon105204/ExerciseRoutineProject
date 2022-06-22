@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -52,11 +51,9 @@
 	});
 
 </script>
-<style>
-</style>
 </head>
-<body bgcolor="skyblue">
-	<h1>exlist home</h1>
+<body bgcolor="lightpink">
+	<h1>exlist_deleteform <a href="/exlist/listhome" style="text-decoration: none;">돌아가기</a></h1>
 	<div>
 		<input type="text" name="filter">
 		<button type="submit">검색</button>
@@ -73,34 +70,19 @@
 			<thead>
 				<th>운동 이름</th>
 				<th>분류</th>
+				<th>삭제</th>
 			</thead>
 			<tbody id="showlist">
 				<c:forEach items="${list}" var="dto">
 					<tr class="${dto.lipart}" name="${dto.liname}">
 						<td>${dto.liname}</td>
 						<td>${dto.lipart}</td>
+						<td>
+							<button onclick="location.href='/exlist/delete?liname=${dto.liname}'">삭제</button>
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
-		</table>
-	</div>
-	
-	<div>
-		<input type="button" value="운동추가" onclick="location.href='/exlist/insertform'">
-		<input type="button" value="운동삭제" onclick="location.href='/exlist/deleteform'">
-	</div>
-	
-	<div id="footer">
-		<table>
-			<tr>
-				<td colspan="5" align="center">
-				<input type="button" value="홈" onclick="location.href=''">
-				<input type="button" value="캘린더" onclick="location.href='/calendar/calendarhome'">
-				<input type="button" value="라이브러리" onclick="location.href='/exlist/listhome'">
-				<input type="button" value="게시판" onclick="location.href=''">
-				<input type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
-				</td>
-			</tr>
 		</table>
 	</div>
 </body>
