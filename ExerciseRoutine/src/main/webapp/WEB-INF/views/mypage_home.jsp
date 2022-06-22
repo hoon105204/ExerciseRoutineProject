@@ -5,8 +5,7 @@
 <html>
 <link rel="stylesheet"
 href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
-<link rel="stylesheet"
-href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
+
 <style>
 #form{
 	width:100%;
@@ -15,9 +14,6 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
 	margin-right: auto;
   	margin-left: auto;
 	text-align: left;
-}
-th{
-	
 }
 h1{
 	text-align: center;
@@ -98,6 +94,7 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 table{
 	margin-left:auto;
 	margin-right:auto;
+	text-align: center;
 }
 #but{
 	position: relative;
@@ -108,7 +105,6 @@ table{
 	margin-top: 20px
 }
 #button1 {
-	
 	width: 110px;
 	height: 60px;
 	margin-left:8px;
@@ -116,17 +112,19 @@ table{
 	border-radius: 5px;
 	text-align: center;
 }
+div{
+text-align: center;
+}
 </style>
 
 
 <body class="p-3 mb-2 bg-light text-dark">
-<body>
 	<h1>MyPage</h1>
-<div id="form">
-     	<table>
+	<div id="form">
+     	<table class="table">
       		<tr>
-	      		<th>ID</th>
-	      		<td>${userinfo.userid }</td>
+	      		<th scope="col">ID</th>
+	      		<td scope="row">${userinfo.userid }</td>
       		</tr>
       		<tr>
 	      		<th>이름</th>
@@ -149,8 +147,8 @@ table{
 	      		<td>${userinfo.weight }</td>
 	      	</tr>
 	      	<tr>
-				<td colspan="2" align="right">
-					<input type="button" value="수정하기" onclick="location.href='/mypage/updateform'">
+				<td colspan="2" align="center">
+					<input class="btn btn-outline-primary" type="button" value="수정하기" onclick="location.href='/mypage/updateform'">
 				</td>
 			</tr>
 		</table>	
@@ -163,17 +161,17 @@ table{
  	<table>
       <tr>
 	      	<th>몸무게</th>
-	      	<td><input type="text" name="weight" value="${userinfo.weight }"></td>
+	      	<td><input class="form-control" type="text" name="weight" value="${userinfo.weight }"></td>
 	  </tr>
 	  <tr>
-		 <td colspan="2" align="right">
-			<input type="submit" value="몸무게 기록 갱신">
+		 <td colspan="2" align="center">
+			<input class="btn btn-outline-primary" type="submit" value="몸무게 기록 갱신">
 		 </td>
 		</tr>
 	</table> 
 </form> 
 
-<div id="but">
+	<div id="but">
 		<span>
 			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
 			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
@@ -181,7 +179,7 @@ table{
 			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
 			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
 		</span>
-</div>
+	</div>
 
 </body>
 </html>
