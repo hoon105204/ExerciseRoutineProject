@@ -14,23 +14,25 @@
 input {
 	backgroundcolor : blue;
 }
+#but{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px
+}
 </style>
 </head>
 <body>
 	<div id='calendar'></div><br>
 	<h2 style="float: center">해당 날짜를 선택하시오!!</h2>
-	<div id="buttonlist">
-		<table>
-			<tr>
-				<td colspan="5" align="center">
-				<input type="button" class="btn-gradient red large" value="홈" onclick="location.href=''">
-				<input type="button" value="캘린더" onclick="location.href='/calendar/calendarhome'">
-				<input type="button" value="라이브러리" onclick="location.href='/exlist/listhome'">
-				<input type="button" value="게시판" onclick="location.href=''">
-				<input type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
-				</td>
-			</tr>
-		</table>
+	<div id="but">
+		<span>
+			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href='/calendar/calendarhome'">
+			<input class="btn btn-primary" type="button" id="button1" value="라이브러리" onclick="location.href='/exlistlibrary/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+		</span>
 	</div>
 </body>
     <script type="text/javascript">
