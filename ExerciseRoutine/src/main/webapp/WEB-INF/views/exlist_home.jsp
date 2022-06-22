@@ -95,7 +95,7 @@
 			<tr>
 				<td colspan="5" align="center">
 				<input type="button" value="홈" onclick="location.href=''">
-				<input type="button" value="캘린더" onclick="location.href=''">
+				<input type="button" value="캘린더" onclick="location.href='/calendar/calendarhome'">
 				<input type="button" value="라이브러리" onclick="location.href='/exlist/listhome'">
 				<input type="button" value="게시판" onclick="location.href=''">
 				<input type="button" value="마이페이지" onclick="location.href=''">
