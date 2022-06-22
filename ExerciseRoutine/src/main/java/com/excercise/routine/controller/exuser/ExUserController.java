@@ -39,4 +39,32 @@ public class ExUserController {
 		return "exuser_addform";
 	}
 	
+	@GetMapping("/delete")
+	public String deleteSet(ExUserDto dto) {
+		
+		int res = exuserService.deleteSet(dto);
+		
+		if(res>0) {
+			System.out.println("삭제 성공");
+			return "redirect:/exuser/exuserhome";
+		} else {
+			System.out.println("삭제 실패");
+			return "redirect:/exuser/exuserhome";
+		}
+	}
+	
+	@GetMapping("/delLast")
+	public String deleteLastSet(ExUserDto dto) {
+		
+		int res = exuserService.deleteLastSet(dto);
+		
+		if(res>0) {
+			System.out.println("삭제 성공");
+			return "redirect:/exuser/exuserhome";
+		} else {
+			System.out.println("삭제 실패");
+			return "redirect:/exuser/exuserhome";
+		}
+	}
+	
 }

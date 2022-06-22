@@ -43,6 +43,7 @@ thead .text-center {
  color: #0093e9;
  margin: 30px 0;
 }
+<<<<<<< HEAD
 #but{
 	position: relative;
 	text-align: center;
@@ -56,12 +57,37 @@ thead .text-center {
 	margin-right:8px;
 	border-radius: 5px;
 	text-align: center;
+=======
+#btn{
+   text-align: center;
+   position: absolute;
+   bottom: 5%;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+button1 {
+  margin: 0px 3px;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0px;
+  text-align: center;
+}
+button1:hover {
+  color: white;
+  background-color: #0093e9;
+  transition: 250ms ease-out;
+}
+#btn1 {
+	position:absolute;
+	right:30%;
+>>>>>>> branch 'master' of https://github.com/hoon105204/ExerciseRoutineProject.git
 }
 </style>
 </head>
 <body>
    
-   <article>
+    <article>
       <div class="container">
          <div class="table-responsive">
          <h2>Exboard list</h2>
@@ -101,11 +127,10 @@ thead .text-center {
                </tbody>
             </table>
          </div>
-         <div>
+         <div id="btn1">
             <button type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
          </div>
          </div>
-         
    </article>
    <div id="but">
 		<span>

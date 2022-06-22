@@ -44,7 +44,7 @@ $(document).ready(function() {
 			</tr>
 			<tr>
 				<td colspan="3" align="center">
-					<input type="submit" class="btn btn-primary" value="로그인" onclick="ch();">
+					<input type="submit" class="btn btn-primary" value="로그인">
 					<input type="button" class="btn btn-primary" value="회원가입" onclick="location.href='/sign/sign_up'">
 				</td>
 			</tr>

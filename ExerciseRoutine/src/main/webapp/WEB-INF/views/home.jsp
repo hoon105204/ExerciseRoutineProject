@@ -48,13 +48,13 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 		<input class="btn btn-primary" type="button" value="로그아웃" onclick="location.href='/'">
 	</div>
 	<div id="image">
-		<img src="https://dimg.donga.com/wps/NEWS/IMAGE/2021/04/12/106357558.1.jpg" onclick="location.href=''">
+		<img src="https://dimg.donga.com/wps/NEWS/IMAGE/2021/04/12/106357558.1.jpg" onclick="location.href='/'">
 	</div>
 	<div id="text">
 		<h3>이번주 운동</h3>
 	</div>
 	<div id="image">
-		<img src="http://newsimg.hankookilbo.com/2018/03/07/201803070494276763_1.jpg" onclick="location.href=''">
+		<img src="http://newsimg.hankookilbo.com/2018/03/07/201803070494276763_1.jpg" onclick="location.href='/exlist/listhome'">
 	</div>
 	<div id="text">
 		<h3>루틴 추천 운동</h3>

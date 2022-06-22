@@ -38,9 +38,15 @@ public class ExUserServiceImpl implements ExUserService{
 	}
 
 	@Override
-	public int delete(ExUserDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int deleteSet(ExUserDto dto) {
+		return exUserMapper.deleteSet(dto);
+	}
+
+	@Override
+	public int deleteLastSet(ExUserDto dto) {
+		int exset = Integer.parseInt(exUserMapper.selectBigSet(dto));
+		dto.setExset(exset);
+		return exUserMapper.deleteLastSet(dto);
 	}
 
 }
