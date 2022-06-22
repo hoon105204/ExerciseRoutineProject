@@ -3,52 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet"
-href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
-<link rel="stylesheet"
-href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
-<style>
-#form{
-	width:100%;
-	padding-left:0%;
-	padding-right:26%;
-	margin-right: auto;
-  	margin-left: auto;
-	text-align: left;
-}
-th{
-	
-}
-h1{
-	text-align: center;
-}
-#curve_chart{
-	width:100%;
-	padding-left:15px;
-	padding-right:15px;
-	margin-right: auto;
-  	margin-left: auto;
-}
-#but{
-	margin-top:50px;
-	text-align: center;
-}
-#button1 {
-	
-	width: 110px;
-	height: 60px;
-	margin-left:8px;
-	margin-right:8px;
-	border-radius: 5px;
-	text-align: center;
-}
-
-
-#text{
-	text-align: center;
-
-}
-</style>
 <head>
 <meta charset="UTF-8">
 
@@ -108,6 +62,7 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 table{
 	margin-left:auto;
 	margin-right:auto;
+	align: center;
 }
 #but{
 	position: relative;
@@ -118,7 +73,6 @@ table{
 	margin-top: 20px
 }
 #button1 {
-	
 	width: 110px;
 	height: 60px;
 	margin-left:8px;
@@ -126,17 +80,31 @@ table{
 	border-radius: 5px;
 	text-align: center;
 }
+div{
+text-align: center;
+}
+.col-sm-6{
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
+#form{
+	align : center;
+}
+h1{
+	text-align: center
+}
 </style>
 
 
 <body class="p-3 mb-2 bg-light text-dark">
-<body>
 	<h1>MyPage</h1>
-<div id="form">
-     	<table>
+	<div id="form">
+	<div class="col-sm-6">
+     	<table class="table">
       		<tr>
-	      		<th>ID</th>
-	      		<td>${userinfo.userid }</td>
+	      		<th scope="col">ID</th>
+	      		<td scope="row">${userinfo.userid }</td>
       		</tr>
       		<tr>
 	      		<th>이름</th>
@@ -159,11 +127,12 @@ table{
 	      		<td>${userinfo.weight }</td>
 	      	</tr>
 	      	<tr>
-				<td colspan="2" align="right">
-					<input type="button" value="수정하기" onclick="location.href='/mypage/updateform'">
+				<td colspan="2" align="center">
+					<input class="btn btn-outline-primary" type="button" value="수정하기" onclick="location.href='/mypage/updateform'">
 				</td>
 			</tr>
 		</table>	
+		</div>
 </div>	
 
 <div id="curve_chart" style="width: 1000px; height: 450px"></div>
@@ -173,16 +142,17 @@ table{
  	<table>
       <tr>
 	      	<th>몸무게</th>
-	      	<td><input type="text" name="weight" id="wtag" value="${userinfo.weight }"></td>
+	      	<td><input class="form-control" type="text" name="weight" id="wtag" value="${userinfo.weight }"></td>
 	  </tr>
-	  <tr >
+	  <tr>
 		 <td colspan="2" align="right">
-			<input type="submit" id="mpup" value="몸무게 기록 갱신">
+			<input class="btn btn-outline-primary" type="submit" id="mpup" value="몸무게 기록 갱신">
 		 </td>
 	  </tr>
 	</table> 
 </form> 
-<div id="but">
+
+	<div id="but">
 		<span>
 			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
 			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href='/calendar/calendarhome'">
@@ -190,7 +160,7 @@ table{
 			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
 			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
 		</span>
-</div>
+	</div>
 
 </body>
 </html>
