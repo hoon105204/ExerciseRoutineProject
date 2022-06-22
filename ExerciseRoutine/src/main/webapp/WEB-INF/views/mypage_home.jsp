@@ -95,6 +95,16 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 </script>
 
 <style>
+#wtag{
+	width:35pt;
+}
+#mpup{
+	width:100%;
+	paddig-left:15px;
+	paddig-right:15px;
+	margin-left:auto;
+	margin-right:auto;
+}
 table{
 	margin-left:auto;
 	margin-right:auto;
@@ -163,16 +173,15 @@ table{
  	<table>
       <tr>
 	      	<th>몸무게</th>
-	      	<td><input type="text" name="weight" value="${userinfo.weight }"></td>
+	      	<td><input type="text" name="weight" id="wtag" value="${userinfo.weight }"></td>
 	  </tr>
-	  <tr>
+	  <tr >
 		 <td colspan="2" align="right">
-			<input type="submit" value="몸무게 기록 갱신">
+			<input type="submit" id="mpup" value="몸무게 기록 갱신">
 		 </td>
-		</tr>
+	  </tr>
 	</table> 
 </form> 
-
 <div id="but">
 		<span>
 			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
