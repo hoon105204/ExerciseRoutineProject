@@ -52,12 +52,3 @@ CREATE TABLE E_REPLY(
 	constraint E_R_BNO_FK foreign KEY(BNO) references EXBOARD(BNO) on delete CASCADE
 );
 
--- 5. 캘린더 
-	
-create table CALENDAR(
-	CALENDAR_NO INT not NULL primary key,
-	CALENDAR_TITLE VARCHAR(200) not null,
-	CALENDAR_MEMO VARCHAR(500),
-	CALENDAR_START DATE,
-	CALENDAR_END DATE
-);

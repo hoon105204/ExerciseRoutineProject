@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/calendar")
 public class CalendarController {
-	
+
 	@RequestMapping("/calendarhome")
-	public String test() {
+	public String calendar() {
 		return "calendar";
+	}
+	
+	@RequestMapping("/excercizetoday")
+	public String excercisetodaylost() {
+		return "excercisetoday";
 	}
 }
