@@ -10,10 +10,16 @@
 </head>
 <script type="text/javascript">
 	function addset(obj) {
+		var no = $(obj).attr("data-exno");
+		var name = $(obj).attr("data-exname");
+		var part = $(obj).attr("data-expart");
+		console.log($(obj).parent().children("table"));
+		$(obj).parent().children("table").append("<tr><td>"+no+"</td><td>"+name+"</td><td>"+part+"</td><td><input type='text' style='width:30px;'></td><td><input type='text' style='width:30px;'></td><td><input type='text' style='width:30px;'></td><td><input type='button' value='저장'></td></tr>");
 		
 	}
 </script>
 <body>
+
 <div id="head">
 	<h3>날자입력</h3>
 	<form action="/exuser/exuserhome2">
@@ -29,29 +35,29 @@
 			</c:when>
 			<c:otherwise>
 				<h1>${date} 운동 리스트</h1>
-				<table border="1">
-					<tr>
-						<th>순서</th>
-						<th>운동이름</th>
-						<th>타입</th>
-						<th>SET</th>	
-						<th>REP</th>	
-						<th>VOL</th>
-						<th>확인</th>
-					</tr>
-					<c:forEach items="${list}" var="dto">
-						
-						<c:if test="${dto.exset eq 1}">
-							<tr>
-								<td colspan="7" align="right">
-									<input type="button" value="${dto.exname}삭제" 
-									onclick="location.href='/exuser/delete?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
-									<input type="button" value="세트삭제" onclick="location.href='/exuser/delLast?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
-									<button id="${dto.exno}" onclick="addset(this)">세트추가</button>
-								</td>
-							</tr>
-						</c:if>
-						
+				<div id="complete">
+					<input type="button" value="운동추가" onclick="">
+					<input type="button" value="불러오기" onclick="">
+					<button type="submit">저장</button>
+				</div><br>
+				
+				<c:set var="done_loop" value="false"/>
+				
+			<c:forEach var="mynum" begin="1" end="7" step="1">
+
+				<div>
+				<table>
+					<colgroup>
+						<col width="30">
+						<col width="100">
+						<col width="50">
+						<col width="40">
+						<col width="50">
+						<col width="50">
+						<col width="50">
+					</colgroup>
+					<c:forEach items="${list}" var="dto"> 
+						<c:if test="${dto.exno eq mynum}">
 						<tr>
 							<td>${dto.exno}</td>
 							<td>${dto.exname}</td>
@@ -71,14 +77,23 @@
 							
 						</tr>
 
+							<c:if test="${dto.exset eq 1}">
+								<br>
+								<input type="button" value="${dto.exname}삭제" 
+								onclick="location.href='/exuser/delete?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
+								<input type="button" value="세트삭제" onclick="location.href='/exuser/delLast?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
+								<button data-exno="${dto.exno}" data-exname="${dto.exname }" data-expart="${dto.expart }" onclick="addset(this)">세트추가</button>
+							</c:if>
+						</c:if>
 					</c:forEach>
-			</c:otherwise>
-		</c:choose>
+				</table>
+				</div>
+					<br>
+
+			</c:forEach>
+		</c:otherwise>
+	</c:choose>
 </div>
-<div id="complete">
-	<input type="button" value="운동추가" onclick="">
-	<input type="button" value="불러오기" onclick="">
-	<button type="submit">저장</button>
-</div>
+
 </body>
 </html>
