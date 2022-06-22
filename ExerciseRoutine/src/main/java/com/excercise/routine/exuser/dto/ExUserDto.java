@@ -9,12 +9,13 @@ public class ExUserDto {
 	private int exset;
 	private float exvol;
 	private int exrep;
+	private int excheck;
 	public ExUserDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public ExUserDto(String userid, String exdate, int exno, String exname, String expart, int exset, float exvol,
-			int exrep) {
+			int exrep, int excheck) {
 		super();
 		this.userid = userid;
 		this.exdate = exdate;
@@ -24,6 +25,7 @@ public class ExUserDto {
 		this.exset = exset;
 		this.exvol = exvol;
 		this.exrep = exrep;
+		this.excheck = excheck;
 	}
 	public String getUserid() {
 		return userid;
@@ -73,10 +75,12 @@ public class ExUserDto {
 	public void setExrep(int exrep) {
 		this.exrep = exrep;
 	}
-
-	
-	
-
+	public int getExcheck() {
+		return excheck;
+	}
+	public void setExcheck(int excheck) {
+		this.excheck = excheck;
+	}
 	
 	
 }

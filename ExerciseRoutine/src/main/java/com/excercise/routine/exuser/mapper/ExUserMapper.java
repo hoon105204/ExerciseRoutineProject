@@ -2,6 +2,7 @@ package com.excercise.routine.exuser.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -19,5 +20,15 @@ public interface ExUserMapper {
 	@Select(" SELECT * FROM EXCERCISE_USER WHERE USERID=#{userid} AND EXDATE=Date(#{exdate}) ORDER BY EXDATE, EXNO, EXSET ")
 	List<ExUserDto> selectDate(String userid, String exdate);
 	
+	// 운동 전셋트 삭제
+	@Delete(" DELETE FROM EXCERCISE_USER WHERE (USERID, EXDATE, EXNAME, EXNO) = (#{userid}, Date(#{exdate}), #{exname}, #{exno}) ")
+	int deleteSet(ExUserDto dto);
 	
+	// 가장 마지막 셋트 삭제
+	@Delete(" DELETE FROM EXCERCISE_USER WHERE (USERID, EXDATE, EXNAME, EXNO, EXSET) = (#{userid}, Date(#{exdate}), #{exname}, #{exno}, #{exset})")
+	int deleteLastSet(ExUserDto dto);
+	
+	// 가장 큰 셋트값 찾아오기
+	@Select(" SELECT max(EXSET) from EXCERCISE_USER where (USERID, EXDATE, EXNAME, EXNO) = (#{userid}, Date(#{exdate}), #{exname}, #{exno}) ")
+	String selectBigSet(ExUserDto dto);
 }

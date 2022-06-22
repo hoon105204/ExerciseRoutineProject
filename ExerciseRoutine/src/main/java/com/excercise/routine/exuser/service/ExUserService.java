@@ -9,5 +9,6 @@ public interface ExUserService {
 	public List<ExUserDto> selectDate(String userid, String exdate);
 	public int insert(ExUserDto dto);
 	public int update(ExUserDto dto);
-	int delete(ExUserDto dto);
+	int deleteSet(ExUserDto dto);
+	int deleteLastSet(ExUserDto dto);
 }

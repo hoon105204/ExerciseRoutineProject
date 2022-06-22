@@ -16,7 +16,7 @@ create table DAYWEIGHT(
 	WEIGHT FLOAT(4,1) not null
 );
 
--- 2. 사용자 운동 정보 : USERID(사용자ID) ,EXNAME(운동이름), EXPART(파트), EXREP(횟수), EXSET(세트수), EXVOL(중량), EXDATE(운동한 날짜)
+-- 2. 사용자 운동 정보 : USERID(사용자ID) ,EXNAME(운동이름), EXPART(파트), EXREP(횟수), EXSET(세트수), EXVOL(중량), EXDATE(운동한 날짜), EXCHECK(운동완료 여부)
 CREATE table EXCERCISE_USER(
 	USERID VARCHAR(500) not null,
 	EXDATE DATE not null,
@@ -25,7 +25,8 @@ CREATE table EXCERCISE_USER(
 	EXPART VARCHAR(1000) not null,
 	EXSET INT not null,
 	EXVOL FLOAT not null,
-	EXREP INT not null
+	EXREP INT not null,
+	EXCHECK INT NOT null CHECK(EXCHECK in(0, 1))
 );
 
 -- 3. 전체 운동 리스트 : LINAME(이름), LIPART(타입)
