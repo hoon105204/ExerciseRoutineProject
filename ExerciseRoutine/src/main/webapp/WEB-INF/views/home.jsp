@@ -51,7 +51,6 @@
 	</div>
 	 
 	<div id="but">
-
 		<span>
 			<input type="button" id="button1" value="홈" onclick="location.href=''">
 			<input type="button" id="button1" value="캘린더" onclick="location.href=''">
@@ -59,13 +58,6 @@
 			<input type="button" id="button1" value="게시판" onclick="location.href=''">
 			<input type="button" id="button1" value="마이페이지" onclick="location.href=''">
 		</span>
-
-		<input type="button" id="button1" value="홈" onclick="location.href=''">
-		<input type="button" id="button1" value="캘린더" onclick="location.href=''">
-		<input type="button" id="button1" value="라이브러리"onclick="location.href=''">
-		<input type="button" id="button1" value="게시판" onclick="location.href=''">
-		<input type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
-
 	</div>
 </body>
 </html>
