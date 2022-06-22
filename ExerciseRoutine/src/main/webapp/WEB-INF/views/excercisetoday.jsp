@@ -6,8 +6,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"
-href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <style>
 #but{
 	position: relative;
@@ -18,33 +16,11 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 </style>
 </head>
 <body>
-	<div id="buttonlist">
-		<table>
-		<div id="calendar">
-			<tr>
-				<td width="100">
-				<input type="button" value="calendar" onclick="location.href='/calendar/calendarhome'">
-				</td>
-			</tr>
-			</div>
-			<div id="plan">
-			<tr>
-				<td width="500">
-				<input type="button" value="계획생성하기" onclick="location.href='/exlist/exlist_serch'">
-				</td>
-			</tr>
-			</div>
-			<div id="etc"></div>			
-			<tr>
-				<td width="300">
-				<input type="button" value="불러오기" onclick="location.href=''">
-				</td>
-				<td width="300">
-				<input type="button" value="휴식" onclick="location.href=''">
-				</td>
-			</tr>
-			</div>
-		</table>	
+	<div id="calendar">
+		<input type="button" value="calendar" onclick="location.href='/calendar/calendarhome'">
+	</div>
+	<div id="plan">
+		<input type="button" value="계획 생성하기" onclick="location.href='/exlist/exlist_serch'">
 	</div>
 	<div id="but">
 		<span>
