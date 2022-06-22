@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 </head>
 <style>
 table {
@@ -54,18 +56,18 @@ h1 {
 		<table>
 			<tr>
 				<th>I D</th>
-				<td><input type="text" id="id" name="userid" required
+				<td><input class="form-control" type="text" id="id" name="userid" required
 					oninput="checkId()"></td>
 				<td><span class="id_ok">사용 가능한 아이디입니다.</span>
 				<span class="id_already">누군가 이 아이디를 사용하고 있어요.</span></td>
 			</tr>
 			<tr>
 				<th>P W</th>
-				<td><input type="password" name="userpw"></td>
+				<td><input class="form-control" type="password" name="userpw"></td>
 			</tr>
 			<tr>
 				<th>이 름</th>
-				<td><input type="text" name="username"></td>
+				<td><input class="form-control" type="text" name="username"></td>
 			</tr>
 			<tr>
 				<th>성 별</th>
@@ -78,15 +80,15 @@ h1 {
 			</tr>
 			<tr>
 				<th>키</th>
-				<td><input type="number" name="height" min="100" max="300" step="0.1"></td>
+				<td><input class="form-control" type="number" name="height" min="100" max="300" step="0.1"></td>
 			</tr>
 			<tr>
 				<th>몸무게</th>
-				<td><input type="number" name="weight" min="20" max="300" step="0.1"></td>
+				<td><input class="form-control" type="number" name="weight" min="20" max="300" step="0.1"></td>
 			</tr>
 			<tr>
 				<td colspan="3" align="center">
-					<input type="submit"value="가입하기">
+					<input type="submit" class="btn btn-primary" value="가입하기">
 				</td>
 			</tr>
 		</table>

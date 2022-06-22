@@ -66,6 +66,12 @@ public class MemberInfoDto {
 	public void setWeight(float weight) {
 		this.weight = weight;
 	}
+
+	@Override
+	public String toString() {
+		return "MemberInfoDto [userid=" + userid + ", userpw=" + userpw + ", username=" + username + ", gender="
+				+ gender + ", birth=" + birth + ", height=" + height + ", weight=" + weight + "]";
+	}
 	
 	
 }

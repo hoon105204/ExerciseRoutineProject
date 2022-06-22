@@ -1,15 +1,21 @@
 package com.excercise.routine.controller.login;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import javax.servlet.http.HttpServletRequest;
+
 import com.excercise.routine.memberinfo.dto.MemberInfoDto;
 import com.excercise.routine.memberinfo.service.MemberInfoService;
 
@@ -19,14 +25,21 @@ public class LoginController {
 	
 	@Autowired
 	private MemberInfoService memberinfoservice;
-
+	
+	
+	@GetMapping("home")
+	public String home() {
+		return "home";
+	}
 	@PostMapping("login")
 	public String login(HttpServletRequest request, Model model, String userid, String userpw) {
 		if(memberinfoservice.login(userid, userpw)!=null) {
 			model.addAttribute("userid",userid);
 			request.getSession().setAttribute("userid", userid);
+			request.getSession().setAttribute("msg", "");
 			return "home";
-		} else {
+		} else{
+			request.getSession().setAttribute("msg", "아이디 또는 비밀번호를 확인해주세요");
 			return "redirect:/";
 		}
 	}
@@ -44,11 +57,11 @@ public class LoginController {
 		return "";
 	}
 
-	@PostMapping("sign_up")
+	@GetMapping("sign_up")
 	public String sign_up() {
 		return "sign_up";
 	}
-
+	
 	@PostMapping("insert")
 	public String insert(MemberInfoDto dto) {
 		int res = memberinfoservice.insert(dto);

@@ -1,8 +1,0 @@
--- 1. 회원정보 예시 추가
-insert into MEMBERINFO values ("user1","user1_pw","user1_name", "M", "1900/12/12", "170.1", "60.1");
-
--- 2. 몸무게 정보 기록 예시 추가
-insert into DAYWEIGHT values ("user1", "2022/06/01", "60.1");
-insert into DAYWEIGHT values ("user1", "2022/06/02", "57.1");
-insert into DAYWEIGHT values ("user1", "2022/06/03", "55.1");
-insert into DAYWEIGHT values ("user1", "2022/06/04", "67.1");

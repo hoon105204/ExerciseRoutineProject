@@ -43,11 +43,53 @@ thead .text-center {
  color: #0093e9;
  margin: 30px 0;
 }
+#btn{
+   text-align: center;
+   position: absolute;
+   bottom: 5%;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+button1 {
+  margin: 0px 3px;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0px;
+  text-align: center;
+}
+button1:hover {
+  color: white;
+  background-color: #0093e9;
+  transition: 250ms ease-out;
+}
+#btn1 {
+	position:absolute;
+	right:30%;
+}
+#but{
+	position: absolute;
+    bottom: 10px;
+    right:1px;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px
+	
+}
+#button1 {
+	
+	width: 110px;
+	height: 60px;
+	margin-left:8px;
+	margin-right:8px;
+	border-radius: 5px;
+	text-align: center;
+}
 </style>
 </head>
 <body>
    
-   <article>
+    <article>
       <div class="container">
          <div class="table-responsive">
          <h2>Exboard list</h2>
@@ -87,10 +129,19 @@ thead .text-center {
                </tbody>
             </table>
          </div>
-         <div>
-            <button type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
+         <div id="btn1">
+            <button class="btn btn-primary" type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
          </div>
          </div>
    </article>
+   <div id="but">
+		<span>
+			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
+			<input class="btn btn-primary" type="button" id="button1" value="라이브러리" onclick="location.href='/exlistlibrary/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+		</span>
+	</div>
 </body>
 </html>

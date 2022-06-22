@@ -6,6 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
@@ -53,9 +55,24 @@
 
 </script>
 <style>
+#but{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px
+}
+#button1 {
+	
+	width: 110px;
+	height: 60px;
+	margin-left:8px;
+	margin-right:8px;
+	border-radius: 5px;
+	text-align: center;
+}
 </style>
 </head>
-<body bgcolor="skyblue">
+<body class="p-3 mb-2 bg-light text-dark">
 	<h1>exlist home</h1>
 	<div>
 		<input type="text" name="filter">
@@ -90,18 +107,14 @@
 		<input type="button" value="운동삭제" onclick="location.href='/exlist/deleteform'">
 	</div>
 	
-	<div id="footer">
-		<table>
-			<tr>
-				<td colspan="5" align="center">
-				<input type="button" value="홈" onclick="location.href=''">
-				<input type="button" value="캘린더" onclick="location.href='/calendar/calendarhome'">
-				<input type="button" value="라이브러리" onclick="location.href='/exlist/listhome'">
-				<input type="button" value="게시판" onclick="location.href=''">
-				<input type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
-				</td>
-			</tr>
-		</table>
+	<div id="but">
+		<span>
+			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
+			<input class="btn btn-primary" type="button" id="button1" value="라이브러리" onclick="location.href='/exlist/listhome'">
+			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
+			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+		</span>
 	</div>
 </body>
 </html>

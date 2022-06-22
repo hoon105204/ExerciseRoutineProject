@@ -1,5 +1,9 @@
 package com.excercise.routine.weightinfo.controller;
 
+
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,22 +27,37 @@ public class WeightInfoController {
 	@Autowired
 	private MemberInfoService userservice;
 	
+	
+	
 	@GetMapping("/mypagehome")
-	public String root(Model model) {
-		// MemberInfoDto dto = 세션에서 가져옴
+	public String root(HttpSession session, Model model) {
+		String userid = (String)session.getAttribute("userid");
+		//List<WeightInfoDto> map =  weightservice.selectW("user1");
 		// model.addAttribute("weightinfo", weightservice.select(dto.getUserid()));
 		// model.addAttribute("userinfo", userservice.selectOne(dto.getUserid()));
-		model.addAttribute("weightlist", weightservice.selectW("user1"));
-		model.addAttribute("weightdate", weightservice.selectD("user1"));
-		model.addAttribute("userinfo", userservice.selectOne("user1"));
+		model.addAttribute("weightlist", weightservice.selectW(userid));
+		//model.addAttribute("weightdate", weightservice.selectD("user1"));
+		model.addAttribute("userinfo", userservice.selectOne(userid));
 		return "mypage_home";
 	}
 	
 	@GetMapping("/updateform")
-	public String update(Model model, MemberInfoDto dto) {
-		model.addAttribute("userinfo", userservice.selectOne("user1"));
+	public String updateform(HttpSession session, Model model, MemberInfoDto dto) {
+		String userid = (String)session.getAttribute("userid");
+		model.addAttribute("userinfo", userservice.selectOne(userid));
 		return "mypage_updateform";
 	}
+	
+	@GetMapping("/insert.do")
+	public String update(WeightInfoDto dto) {
+		System.out.println(dto);
+		if(weightservice.insertWeight(dto) > 0) {
+			return "redirect:/mypage/mypagehome";
+		} else {
+			return "redirect:/mypage/updateform";
+		}
+	}
+	
 	@GetMapping("/updateres.do")
 	public String updateres(MemberInfoDto dto) {
 		
