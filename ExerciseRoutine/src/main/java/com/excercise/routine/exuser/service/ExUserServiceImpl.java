@@ -1,6 +1,5 @@
 package com.excercise.routine.exuser.service;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +15,14 @@ public class ExUserServiceImpl implements ExUserService{
 	public ExUserMapper exUserMapper;
 	
 	@Override
-	public List<ExUserDto> selectAll() {
+	public List<ExUserDto> selectAll(String userid) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<ExUserDto> selectDate(Date exdate) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ExUserDto> selectDate(String userid, String exdate) {
+		return exUserMapper.selectDate(userid, exdate);
 	}
 
 	@Override
