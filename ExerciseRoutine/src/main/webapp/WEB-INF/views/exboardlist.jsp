@@ -114,15 +114,13 @@ button1:hover {
             <button type="button" value="글쓰기" onclick="location.href='/exboard/insertform'">글쓰기</button>
          </div>
          </div>
+         <div id="btn">
+         		<button type="button" value="홈" onclick="location.href='/sign/home'">홈</button>
+				<button type="button" value="캘린더" onclick="location.href='/calendar/calendarhome'">캘린더</button>
+				<button type="button" value="라이브러리" onclick="location.href='/exlistlibrary/list'">라이브러리</button>
+				<button type="button" value="게시판" onclick="location.href='/exboard/list'">게시판</button>
+				<button type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome'">마이페이지</button>
+   		</div>
    </article>
-   <div id="but">
-		<span>
-			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
-			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href='/exuser/exuserhome'">
-			<input class="btn btn-primary" type="button" id="button1" value="라이브러리" onclick="location.href='/exlistlibrary/list'">
-			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
-			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
-		</span>
-	</div>
 </body>
 </html>
