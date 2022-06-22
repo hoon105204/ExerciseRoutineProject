@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import javax.servlet.http.HttpServletRequest;
 import com.excercise.routine.memberinfo.dto.MemberInfoDto;
 import com.excercise.routine.memberinfo.service.MemberInfoService;
 
@@ -21,9 +21,10 @@ public class LoginController {
 	private MemberInfoService memberinfoservice;
 
 	@PostMapping("login")
-	public String login(Model model, String userid, String userpw) {
+	public String login(HttpServletRequest request, Model model, String userid, String userpw) {
 		if(memberinfoservice.login(userid, userpw)!=null) {
 			model.addAttribute("userid",userid);
+			request.getSession().setAttribute("userid", userid);
 			return "home";
 		} else {
 			return "redirect:/";
