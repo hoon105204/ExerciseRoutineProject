@@ -5,46 +5,6 @@
 <html>
 <link rel="stylesheet"
 href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
-
-<style>
-#form{
-	width:100%;
-	padding-left:0%;
-	padding-right:26%;
-	margin-right: auto;
-  	margin-left: auto;
-	text-align: left;
-}
-h1{
-	text-align: center;
-}
-#curve_chart{
-	width:100%;
-	padding-left:15px;
-	padding-right:15px;
-	margin-right: auto;
-  	margin-left: auto;
-}
-#but{
-	margin-top:50px;
-	text-align: center;
-}
-#button1 {
-	
-	width: 110px;
-	height: 60px;
-	margin-left:8px;
-	margin-right:8px;
-	border-radius: 5px;
-	text-align: center;
-}
-
-
-#text{
-	text-align: center;
-
-}
-</style>
 <head>
 <meta charset="UTF-8">
 
@@ -94,7 +54,7 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 table{
 	margin-left:auto;
 	margin-right:auto;
-	text-align: center;
+	align: center;
 }
 #but{
 	position: relative;
@@ -115,12 +75,24 @@ table{
 div{
 text-align: center;
 }
+.col-sm-6{
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
+#form{
+	align : center;
+}
+h1{
+	text-align: center
+}
 </style>
 
 
 <body class="p-3 mb-2 bg-light text-dark">
 	<h1>MyPage</h1>
 	<div id="form">
+	<div class="col-sm-6">
      	<table class="table">
       		<tr>
 	      		<th scope="col">ID</th>
@@ -152,6 +124,7 @@ text-align: center;
 				</td>
 			</tr>
 		</table>	
+		</div>
 </div>	
 
 <div id="curve_chart" style="width: 1000px; height: 450px"></div>
@@ -174,7 +147,7 @@ text-align: center;
 	<div id="but">
 		<span>
 			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
-			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href=''">
+			<input class="btn btn-primary" type="button" id="button1" value="캘린더" onclick="location.href='/exuser/exuserhome'">
 			<input class="btn btn-primary" type="button" id="button1" value="라이브러리"onclick="location.href='/exlist/listhome'">
 			<input class="btn btn-primary" type="button" id="button1" value="게시판" onclick="location.href='/exboard/list'">
 			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">

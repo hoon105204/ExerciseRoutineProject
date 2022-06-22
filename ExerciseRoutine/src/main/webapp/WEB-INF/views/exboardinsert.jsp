@@ -86,8 +86,5 @@ button:hover {
    </form> 
    
 <textarea class="form-control" rows="3"></textarea>
-   
-   
-
 </body>
 </html>

@@ -19,11 +19,17 @@ table{
 h1{
 	text-align: center;
 }
+.col-sm-6{
+	margin-left:auto;
+	margin-right:auto;
+	text-align : center;
+}
 </style>
 
 <body class="p-3 mb-2 bg-light text-dark">
 	<h1>mypage updateform</h1>
 <div>
+	<div class="col-sm-6">
 	<form action="updateres.do" method="post">
 		<input type="hidden" name="userid" value="${userinfo.userid }">
      	<table class="table">
@@ -59,6 +65,7 @@ h1{
 			</tr>
 		</table>
 	</form>	
+	</div>
 </div>	
 	
 </body>
