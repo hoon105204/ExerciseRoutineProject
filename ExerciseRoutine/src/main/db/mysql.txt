@@ -59,3 +59,4 @@ CREATE TABLE E_REPLY(
 	constraint E_R_WRITER_FK FOREIGN key(WRITER) references 부모테이블명(PK컬럼명) on delete cascade on update cascade,
 	constraint E_R_BNO_FK foreign KEY(BNO) references EXBOARD(BNO) on delete CASCADE
 );
+
