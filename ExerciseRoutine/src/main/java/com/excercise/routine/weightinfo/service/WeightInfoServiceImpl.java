@@ -15,12 +15,18 @@ public class WeightInfoServiceImpl implements WeightInfoService{
 	private WeightInfoMapper mpmemberinfo;
 
 	@Override
-	public List<WeightInfoDto> select(String userid) {
-		return mpmemberinfo.select(userid);
+	public List<WeightInfoDto> selectW(String userid) {
+		return mpmemberinfo.selectW(userid);
 	}
 
 	@Override
 	public int insertWeight(WeightInfoDto dto) {
 		return mpmemberinfo.insertWeight(dto);
 	}
+
+	@Override
+	public List<WeightInfoDto> selectD(String userid) {
+		return mpmemberinfo.selectD(userid);
+	}
+
 }

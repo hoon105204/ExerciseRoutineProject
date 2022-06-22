@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <style>
-.form-container {
-  height: 100vh;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-} 
-table {
+.form-container{
+   height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  table {
     width: 700px;
     height: 380px;
     border-collapse: collapse;
@@ -59,35 +59,34 @@ button:hover {
   transition: 250ms ease-out;
 }
 </style>
+<script type="text/javascript">
+
+</script>
 <title>exboard</title>
 </head>
 <body>
-   <form class="form-container" action="/exboard/insert" method="post">
+  <form class="form-container" action="update" method="post">
+      <input type="hidden" name="bno" value="${dto.bno }">
       <table class="board">
          <tr>
             <th>WRITER</th>
-            <td><input type="text" name="username"></td>
+            <td>${dto.username }</td>
          </tr>
          <tr>
             <th>TITLE</th>
-            <td><input type="text" name="title"></td>
+            <td><input type="text" name="title" value="${dto.title }"></td>
          </tr>
          <tr>
             <th>CONTENT</th>
-            <td><textarea rows="10" cols="60" name="content"></textarea></td>
+            <td><textarea rows="10" cols="60" name="content">${dto.content }</textarea></td>
          </tr>
          <tr>
             <td colspan="2" align="right">
-               <input type="submit" value="완료">
-               <input type="button" value="취소" onclick="location.href='/exboard/list'">
-            <td>
+               <button type="submit" value="완료">완료</button>
+               <button type="button" value="취소" onclick="location.href='/exboard/list'">취소</button>
+            </td>   
          </tr>
       </table>
-   </form> 
-   
-<textarea class="form-control" rows="3"></textarea>
-   
-   
-
+   </form>
 </body>
 </html>

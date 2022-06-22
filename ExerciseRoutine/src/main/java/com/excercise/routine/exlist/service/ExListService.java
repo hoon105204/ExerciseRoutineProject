@@ -9,5 +9,5 @@ public interface ExListService {
 	public ExListDto selectOne(String liname);
 	public int insert(ExListDto dto);
 	public int update(ExListDto dto);
-	public int deleteMulti(List<String> linameList);
+	public int delete(String liname);
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,16 +13,16 @@
 	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
-	
-	
 	function drawChart() {
-	
+			const a = Date.parse('${weightdate[1].memberdate}');
+			const ab = Date.parse('${weightdate[2].memberdate}');
+			console.log(a);
 		  var data = google.visualization.arrayToDataTable([
-	        ['Date', 'weight'],
-	        ['2004-05-31',  85],
-	        ['2005',  90],
-	        ['2006',  70],
-	        ['2007',  75]
+			['Date', 'weight'],
+	        ['${weightlist[1].memberdate}', ${weightlist[1].weight}],
+			['${weightlist[1].memberdate}', ${weightlist[2].weight}],
+			['${weightlist[3].memberdate}', ${weightlist[3].weight}],
+			['${weightlist[1].memberdate}', ${weightlist[0].weight}]
 	      ]);
 	
 	      var options = {
@@ -82,7 +83,9 @@ table{
 </div>	
 
 <div id="curve_chart" style="width: 900px; height: 500px"></div>
-
+<div>
+	print();
+</div>
 <form action="insert" method="post">       
  	<table>
       <tr>
@@ -97,6 +100,18 @@ table{
 	</table> 
 </form> 
 
-
+	<div id="footer">
+		<table>
+			<tr>
+				<td colspan="5" align="center">
+				<input type="button" value="홈" onclick="location.href=''">
+				<input type="button" value="캘린더" onclick="location.href=''">
+				<input type="button" value="라이브러리" onclick="location.href='/exlist/listhome'">
+				<input type="button" value="게시판" onclick="location.href=''">
+				<input type="button" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>

@@ -37,9 +37,8 @@ public class ExListServiceImpl implements ExListService {
 	}
 
 	@Override
-	public int deleteMulti(List<String> linameList) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int delete(String liname) {
+		return exListMapper.delete(liname);
 	}
 
 }
