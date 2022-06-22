@@ -51,6 +51,10 @@ h1{
 </style>
 <head>
 <meta charset="UTF-8">
+
+<title>Insert title here</title>
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <title>My Page-home</title>
 </head>
 
@@ -95,8 +99,27 @@ table{
 	margin-left:auto;
 	margin-right:auto;
 }
+#but{
+	position: relative;
+    bottom: 10px;
+    right:1px;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px
+}
+#button1 {
+	
+	width: 110px;
+	height: 60px;
+	margin-left:8px;
+	margin-right:8px;
+	border-radius: 5px;
+	text-align: center;
+}
 </style>
 
+
+<body class="p-3 mb-2 bg-light text-dark">
 <body>
 	<h1>MyPage</h1>
 <div id="form">
@@ -159,5 +182,6 @@ table{
 			<input class="btn btn-primary" type="button" id="button1" value="마이페이지" onclick="location.href='/mypage/mypagehome'">
 		</span>
 </div>
+
 </body>
 </html>
