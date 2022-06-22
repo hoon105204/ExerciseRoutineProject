@@ -13,6 +13,9 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
     <link href='${pageContext.request.contextPath }/resources/fullcalendar/main.css' rel='stylesheet' />
     <script src='${pageContest.request.contextPath }/resources/fullcalendar/main.js'></script>
 <style>
+h2{
+  color: var(--bs-blue);
+}
 input {
 	backgroundcolor : blue;
 }
@@ -26,7 +29,6 @@ input {
 </head>
 <body>
 	<div id='calendar'></div><br>
-	<h2 style="float: center">해당 날짜를 선택하시오!!</h2>
 	<div id="but">
 		<span>
 			<input class="btn btn-primary" type="button" id="button1" value="홈" onclick="location.href='/sign/home'">
@@ -63,10 +65,10 @@ input {
           eventRemove: function(obj){
         	  console.log(obj);
           },
-          select: function(arg){        	 
+          select: function(arg){
         	 var title = confirm('해당 날짜의 운동 계획 생성 하시나요?');
         	 if(title){
-        		 location.href='/calendar/excercizetoday';
+        		 location.href='/exuser/exuserhome';
         	 }
           }
         });
