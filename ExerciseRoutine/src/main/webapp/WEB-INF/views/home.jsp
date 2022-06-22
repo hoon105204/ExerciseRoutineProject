@@ -49,7 +49,7 @@ href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 		<input class="btn btn-primary" type="button" value="로그아웃" onclick="location.href='/'">
 	</div>
 	<div id="image">
-		<img src="https://dimg.donga.com/wps/NEWS/IMAGE/2021/04/12/106357558.1.jpg" onclick="location.href='/'">
+		<img src="https://dimg.donga.com/wps/NEWS/IMAGE/2021/04/12/106357558.1.jpg" onclick="location.href='/exuser/exuserhome'">
 	</div>
 	<div id="text">
 		<h3>이번주 운동</h3>
