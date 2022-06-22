@@ -1,5 +1,7 @@
 package com.excercise.routine.controller.exuser;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -23,19 +25,26 @@ public class ExUserController {
 	
 	@GetMapping("/exuserhome")
 	public String exuserhome(Model model, HttpServletRequest request) {
-		// String userid = (String)request.getSession().getAttribute("userid");
-		String userid = "user1";
-		// 날짜와 연동 필요
-		String now = "2022-06-22";
+		String userid = (String)request.getSession().getAttribute("userid");
+		Date datenow = new Date();
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		
+		String now = format.format(datenow);
 		
 		List<ExUserDto> list = exuserService.selectDate(userid, now);
 		model.addAttribute("list", list);
+		model.addAttribute("date", now);
 		return "exuser_home";
 	}
 	
-	@GetMapping("/addform")
-	public String addForm() {
-		return "exuser_addform";
+	@GetMapping("/exuserhome2")
+	public String exuserhome2(Model model, HttpServletRequest request, String date) {
+		String userid = (String)request.getSession().getAttribute("userid");
+
+		List<ExUserDto> list = exuserService.selectDate(userid, date);
+		model.addAttribute("list", list);
+		model.addAttribute("date", date);
+		return "exuser_home";
 	}
 	
 	@GetMapping("/delete")

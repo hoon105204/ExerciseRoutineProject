@@ -8,18 +8,27 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript">
+	function addset(obj) {
+		
+	}
+</script>
 <body>
 <div id="head">
-	<h3>오늘 날짜 : (덕수씨 캘린더 연동?)</h3>
+	<h3>날자입력</h3>
+	<form action="/exuser/exuserhome2">
+		<input type="text" name="date" value="${date}">
+		<input type="submit" value="확인">
+	</form>
 </div>
 <div id="todaylist">
 		<c:choose>
 			<c:when test="${empty list }">
 					<h3>--------오늘의 운동이 없습니다--------<h3><br>
-					<input type="button" value="운동 추가하기" onclick="location.href='/exuser/addform'">
+					<input type="button" value="운동 추가하기" onclick="location.href=''">
 			</c:when>
 			<c:otherwise>
-				<h1>오늘 운동 리스트</h1>
+				<h1>${date} 운동 리스트</h1>
 				<table border="1">
 					<tr>
 						<th>순서</th>
@@ -38,7 +47,7 @@
 									<input type="button" value="${dto.exname}삭제" 
 									onclick="location.href='/exuser/delete?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
 									<input type="button" value="세트삭제" onclick="location.href='/exuser/delLast?userid=${dto.userid}&exdate=${dto.exdate}&exname=${dto.exname}&exno=${dto.exno}'">
-									<button>세트추가</button>
+									<button id="${dto.exno}" onclick="addset(this)">세트추가</button>
 								</td>
 							</tr>
 						</c:if>
@@ -63,18 +72,13 @@
 						</tr>
 
 					</c:forEach>
-						<tr>
-							<td colspan="7">
-								<input type="button" value="운동추가" onclick="">
-								<input type="button" value="불러오기" onclick="">
-							</td>
-						</tr>
-				</table>
 			</c:otherwise>
 		</c:choose>
 </div>
 <div id="complete">
-	<button type="submit">운동완료</button>
+	<input type="button" value="운동추가" onclick="">
+	<input type="button" value="불러오기" onclick="">
+	<button type="submit">저장</button>
 </div>
 </body>
 </html>
