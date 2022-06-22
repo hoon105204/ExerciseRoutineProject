@@ -43,21 +43,6 @@ thead .text-center {
  color: #0093e9;
  margin: 30px 0;
 }
-<<<<<<< HEAD
-#but{
-	position: relative;
-	text-align: center;
-	width: 100%;
-	margin-top: 20px
-}
-#button1 {
-	width: 110px;
-	height: 60px;
-	margin-left:8px;
-	margin-right:8px;
-	border-radius: 5px;
-	text-align: center;
-=======
 #btn{
    text-align: center;
    position: absolute;
@@ -81,7 +66,6 @@ button1:hover {
 #btn1 {
 	position:absolute;
 	right:30%;
->>>>>>> branch 'master' of https://github.com/hoon105204/ExerciseRoutineProject.git
 }
 </style>
 </head>
