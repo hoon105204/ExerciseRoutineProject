@@ -9,14 +9,18 @@
 <body>
 	
 <style>
+h1{
+	text-align: center;
+	color: blue;
+}
 table{
 	margin-left:auto;
 	margin-right:auto;
 }
 </style>
 
-<body bgcolor="skyblue">
-	<h1>mypage updateform</h1>
+<body>
+	<h1>MYPAGE UPDATEFORM</h1>
 <div>
 	<form action="updateres.do" method="post">
 		<input type="hidden" name="userid" value="${userinfo.userid }">
