@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,17 +13,41 @@
 	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
+	
 	function drawChart() {
-			const a = Date.parse('${weightdate[1].memberdate}');
-			const ab = Date.parse('${weightdate[2].memberdate}');
-			console.log(a);
-		  var data = google.visualization.arrayToDataTable([
+		
+			
+			/*console.log(${item.memberdate});
+		 	 //var data = google.visualization.DataTable([
+			/*data.addColumn('weight','체중');
+			data.addRow('memberdate','날짜');*/
+			var weightlist = '${weightlist}';
+			console.log(weightlist);
+			var weightlist0 = weightlist.split(',');
+			console.log(weightlist0);
+			
+			
+			
+			var table_data = [];
+			for(let value of weightlist0){
+				<c:forEach items="${weightlist}" var="item">
+			    	table_data.push(["${item.memberdate}",  "${item.weight}"])
+			    </c:forEach>
+			};
+			console.log(table_data);
+			
+			var data = new google.visualization.arrayToDataTable([
+			//data.addColumn('date', 'memberdate')
+			//data.addColumn('number', 'weight')
 			['Date', 'weight'],
-	        ['${weightlist[1].memberdate}', ${weightlist[1].weight}],
-			['${weightlist[1].memberdate}', ${weightlist[2].weight}],
-			['${weightlist[3].memberdate}', ${weightlist[3].weight}],
-			['${weightlist[1].memberdate}', ${weightlist[0].weight}]
-	      ]);
+			<c:forEach items="${weightlist}" var="item">['${item.memberdate}',  ${item.weight}],
+			</c:forEach>
+			
+			/*['${weightlist[0].memberdate}',${weightlist[0].weight}],
+	       	['${weightlist[1].memberdate}',${weightlist[1].weight}],
+			['${weightlist[2].memberdate}',${weightlist[2].weight}],
+			['${weightlist[3].memberdate}',${weightlist[3].weight}]*/
+	     	]);
 	
 	      var options = {
 	        title: '체중 변화',
@@ -45,9 +69,6 @@ table{
 
 <body bgcolor="skyblue">
 	<h1>MyPage</h1>
-	<h2>${weightlist[1].weight}</h2>
-	<h2>${weightlist[1].memberdate}</h2>
-	
 <div>
      	<table>
       		<tr>
@@ -83,14 +104,13 @@ table{
 </div>	
 
 <div id="curve_chart" style="width: 900px; height: 500px"></div>
-<div>
-	print();
-</div>
-<form action="insert" method="post">       
+
+<form action="insert.do" method="post"> 
+	<input type="hidden" name="userid" value="${userinfo.userid }">  
  	<table>
       <tr>
 	      	<th>몸무게</th>
-	      	<td><input type="text" id="weight" value="${userinfo.weight }"></td>
+	      	<td><input type="text" name="weight" value="${userinfo.weight }"></td>
 	  </tr>
 	  <tr>
 		 <td colspan="2" align="right">
