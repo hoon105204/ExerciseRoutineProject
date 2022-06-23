@@ -49,5 +49,10 @@ public class MemberInfoServiceImpl implements MemberInfoService {
 		return memberinfomapper.updateMP(dto);
 	}
 
+	@Override
+	public int delete(String userid) {
+		return memberinfomapper.delete(userid);
+	}
+
 
 }

@@ -49,9 +49,13 @@ public class WeightInfoController {
 	}
 	
 	@GetMapping("/insert.do")
-	public String update(WeightInfoDto dto) {
-		System.out.println(dto);
+	public String update(WeightInfoDto dto, HttpSession session) {
+		String userid = (String)session.getAttribute("userid");
+		MemberInfoDto dto2 = new MemberInfoDto();
+		dto2.setUserid(userid);
+		dto2.setWeight(dto.getWeight());
 		if(weightservice.insertWeight(dto) > 0) {
+			userservice.update(dto2);
 			return "redirect:/mypage/mypagehome";
 		} else {
 			return "redirect:/mypage/updateform";
@@ -67,4 +71,17 @@ public class WeightInfoController {
 			return "redirect:/mypage/updateform";
 		}
 	}
+	
+	@GetMapping("/delete.do")
+	public String delete(String userid, HttpSession session) {
+		int res = userservice.delete(userid);
+		
+		if(res>0) {
+			session.removeAttribute("userid");
+			return "redirect:/sign/login";
+		} else {
+			return "redirect:/mypage/updateform";
+		}
+	}
+	
 }

@@ -2,6 +2,7 @@ package com.excercise.routine.memberinfo.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -23,7 +24,7 @@ public interface MemberInfoMapper {
 			+ "#{username}, #{gender}, #{birth}, #{height}, #{weight}) ")
 	int insert(MemberInfoDto dto);
 	
-	@Update(" UPDATE MEMBERINFO SET WEIGHT=#{dto.weight} WHERE USERID=#{dto.userid} ")
+	@Update(" UPDATE MEMBERINFO SET WEIGHT=#{weight} WHERE USERID=#{userid} ")
 	int update(MemberInfoDto dto);
 	
 	
@@ -35,6 +36,9 @@ public interface MemberInfoMapper {
 
 	@Update(" UPDATE MEMBERINFO SET USERNAME=#{username}, BIRTH=#{birth}, GENDER=#{gender}, HEIGHT=#{height}, WEIGHT=#{weight} WHERE USERID=#{userid} ")
 	int updateMP(MemberInfoDto dto);
+	
+	@Delete(" DELETE FROM MEMBERINFO WHERE USERID=#{userid} ")
+	int delete(String userid);
 	
 	
 }

@@ -67,6 +67,7 @@ h1{
 				<td colspan="2" align="right">
 					<input class="btn btn-outline-primary" type="submit" value="확인">
 					<input class="btn btn-outline-primary" type="button" value="취소" onclick="location.href='/mypage/mypagehome'">
+					<input class="btn btn-outline-primary" type="button" value="회원탈퇴" onclick="location.href='/mypage/delete.do=${userinfo.userid}'">
 				</td>
 			</tr>
 		</table>

@@ -12,4 +12,5 @@ public interface MemberInfoService {
 	public int updateMP(MemberInfoDto dto);
 	public int idCheck(String id);
 	public MemberInfoDto login(String userid, String userpw);
+	public int delete(String userid);
 }
