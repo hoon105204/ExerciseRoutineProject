@@ -39,7 +39,7 @@ button:hover {
 </style>
 </head>
 <body>
-	<h1>exlist insert form</h1>
+	<h1>운동 종목 추가</h1>
 	<form action="insert" method="post">
 		<table class="table table-condensed">
 			<tr>

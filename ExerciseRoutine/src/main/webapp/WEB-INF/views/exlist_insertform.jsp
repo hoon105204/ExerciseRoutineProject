@@ -19,7 +19,7 @@ h1{
 }
 </style>
 <body>
-	<h1>exlist insert form</h1>
+	<h1>운동 종목 추가</h1>
 	<div>
 	<form action="insert" method="post">
 		<table>

@@ -98,7 +98,9 @@ button:hover {
  <article>
       <div class="container">
          <div class="table-responsive">
-	<h2>Exlistlibrary</h2>
+         <div align="center">
+			<h2>운동 종목 조회</h2>
+			</div>
 <div id="scrool">
 	<div id="search">
 		<input type="text" name="filter">

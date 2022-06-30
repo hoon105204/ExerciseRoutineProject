@@ -69,34 +69,18 @@ button1:hover {
 }
 </style>
 
-<script type="text/javascript">
-	function formatDate(date) {
-    
-    var d = new Date(date),
-    
-    month = '' + (d.getMonth() + 1) , 
-    day = '' + d.getDate(), 
-    year = d.getFullYear();
-    
-    if (month.length < 2) month = '0' + month; 
-    if (day.length < 2) day = '0' + day; 
-    
-    return [year, month, day].join('-');
-    
-    }
-</script>
 </head>
 <body>
    <article>
       <div class="container">
          <div class="table-responsive">
-         <h2>Exboard list</h2>
+         <h2>게시판</h2>
             <table class="table table-striped table-sm">
                <colgroup>
                   <col style="width: 10%;" />
                   <col style="width: auto;" />
                   <col style="width: 15%;" />
-                  <col style="width: 10%;" />
+                  <col style="width: 20%;" />
                </colgroup>
                <thead>
                   <tr class="text-center">

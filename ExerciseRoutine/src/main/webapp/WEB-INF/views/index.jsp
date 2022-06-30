@@ -29,7 +29,7 @@ $(document).ready(function() {
 </script>
 <body class="text-center">
 	<div style="padding: 300px;">
-		<h1 >웹페이지 이름</h1>
+		<h1 >Exercise Routine Web</h1>
 	</div>
 	
 	<form class="form-signin" action="/sign/login" method="post">
